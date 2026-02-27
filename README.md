@@ -796,3 +796,26 @@ For public-facing preview mode, use this read path:
 ### OpsOTA Repo Description (Short Alt)
 
 `OpsOTA corpus distillation infrastructure for reproducible AI training data: schema-governed merges, quality gates, exact token accounting, and visual intelligence.`
+
+
+## Teaser Release Scope (2026-02-27)
+
+This repository is currently in a public teaser phase focused on project transparency and current-state visibility.
+
+Included in teaser scope:
+
+- `README.md`
+- `docs/`
+- `visualizations/`
+- `file-trees/`
+- `PROJECT_DATABASE_DOCUMENTATION.md`
+- `PROJECT_MOONSHINE_UPDATE_1.md`
+
+Teaser intent:
+
+- expose current architecture and governance state,
+- show schema authority and merge-state evidence,
+- provide visual evidence of current corpus analytics,
+- show navigable file-tree snapshots for fast orientation.
+
+Operational/private overlays and non-teaser subsystems remain intentionally out of scope for this release phase.
