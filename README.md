@@ -1,15 +1,15 @@
-# SOTA++ Token Forensics Pipeline
-
-## Production-Grade Dataset Intelligence Toolkit
-
-![Python 3.10+](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=yellow)
-![License](https://img.shields.io/badge/License-Sovereign-blueviolet?style=for-the-badge)
-[![Part of Decentralize SOTA](https://img.shields.io/badge/Project-Decentralize_SOTA-0A66C2?style=for-the-badge)](https://github.com/calisweetleaf)
-
-**Part of Project Decentralize SOTA - Drop 3: Dataset Intelligence Toolkit**
+<div align="center">
+  <img src="visuals/logo.png" alt="Operation Moonshine Distill the Flow" width="460" />
+  <h1>Operation Moonshine</h1>
+  <p><strong>Distill the Flow</strong></p>
+  <p>OpsOTA Drop 3: Corpus Forensics and Distillation Infrastructure</p>
+  <p><a href="https://github.com/calisweetleaf/Reinforcement-Learning-Full-Pipeline">Drop 1: Reinforcement-Learning-Full-Pipeline</a></p>
+  <p><a href="https://github.com/calisweetleaf/SOTA-Runtime-Core">Drop 2: SOTA-Runtime-Core</a></p>
+  <p><a href="https://github.com/calisweetleaf/distill-the-flow">Drop 3: distill-the-flow</a></p>
+  <p><a href="https://github.com/calisweetleaf/somnus-license/blob/main/LICENSE">Somnus License (Repository Governing Terms)</a></p>
+</div>
 
 ---
-
 ## Mission Statement
 
 This toolkit delivers **best-in-class token forensics** for training data preparation. No MVP shortcuts — production-grade analysis with strict verification gates, reproducibility-first design, and zero safety filtering.
@@ -819,3 +819,4 @@ Teaser intent:
 - show navigable file-tree snapshots for fast orientation.
 
 Operational/private overlays and non-teaser subsystems remain intentionally out of scope for this release phase.
+
