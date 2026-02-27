@@ -820,3 +820,31 @@ Teaser intent:
 
 Operational/private overlays and non-teaser subsystems remain intentionally out of scope for this release phase.
 
+## Main-Lane Expansion Update (2026-02-27)
+
+Main DB promotion wave is now complete for `qwen` then `deepseek`.
+
+- Active DB: `reports/main/moonshine_mash_active.db`
+- Provider composition:
+  - `conversations`: chatgpt `1439`, claude `757`, deepseek `320`, qwen `75`
+  - `messages`: chatgpt `169397`, claude `5589`, deepseek `2073`, qwen `778`
+  - `distilled_conversations`: chatgpt `1326`, claude `652`, deepseek `304`, qwen `67`
+- Integrity status:
+  - `record_uid` collisions: `0` across all core tables
+  - SQLite integrity: `PRAGMA quick_check = ok`
+  - provider source-row coverage in main: complete
+
+### Exact Token Recount (o200k_base, non-system)
+
+- chatgpt: `115,334,978`
+- claude: `3,008,283`
+- deepseek: `1,482,829`
+- qwen: `1,017,719`
+- total: `120,843,809`
+
+### Evidence Pack
+
+- `reports/main/final_db_pass_20260227.json`
+- `reports/main/final_db_pass_20260227.md`
+- `reports/main/token_recount.main.postdeps.json`
+

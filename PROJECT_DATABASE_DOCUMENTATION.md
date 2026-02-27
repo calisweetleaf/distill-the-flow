@@ -2,7 +2,7 @@
 
 **Document Identifier:** `MASH-SCHEMA-SPEC-2026-02-26`  
 **Authority Database:** `reports/main/moonshine_mash_active.db`  
-**Provider Composition:** `chatgpt + claude`  
+**Provider Composition:** `chatgpt + claude + qwen + deepseek`  
 **Revision:** 2.0.0  
 **Status:** ACTIVE — Production  
 **Supersedes:** v1.0.0 (`moonshine_corpus.db` legacy spec)
@@ -35,12 +35,12 @@
 |---|---|
 | Tables | 3 |
 | Total columns | 80 |
-| Total rows | 179,160 |
+| Total rows | 182,777 |
 | Indexes | 16 (3 unique) |
-| Conversations | 2,196 |
-| Distilled conversations | 1,978 (90.1% pass rate) |
-| Messages | 174,986 |
-| Providers merged | `chatgpt`, `claude` |
+| Conversations | 2,591 |
+| Distilled conversations | 2,349 (90.7% pass rate) |
+| Messages | 177,837 |
+| Providers merged | `chatgpt`, `claude`, `qwen`, `deepseek` |
 
 ---
 
@@ -105,7 +105,7 @@ erDiagram
 
 ### 3.1 `conversations` — Conversation-Level Analytics
 
-**Row Count:** 2,196  
+**Row Count:** 2,591  
 **Column Count:** 33
 
 | # | Column | Type | Key | Null | Description |
@@ -160,7 +160,7 @@ erDiagram
 
 ### 3.2 `distilled_conversations` — Quality-Gated Subset
 
-**Row Count:** 1,978 (90.1% of conversations pass distillation)  
+**Row Count:** 2,349 (90.7% of conversations pass distillation)  
 **Column Count:** 32
 
 Distillation policy filters conversations through quality gates based on information gain, malicious compliance, and token thresholds. Only rows passing all gates are admitted. Each row carries full provenance metadata linking it to the source conversation and the distillation run that produced it.
@@ -217,7 +217,7 @@ Distillation policy filters conversations through quality gates based on informa
 
 ### 3.3 `messages` — Message-Level Payload
 
-**Row Count:** 174,986  
+**Row Count:** 177,837  
 **Column Count:** 15
 
 | # | Column | Type | Key | Null | Description |

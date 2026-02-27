@@ -1,0 +1,44 @@
+{
+  "generated_at": "2026-02-27T06:16:51.698684+00:00",
+  "db_path": "reports/main/moonshine_mash_active.db",
+  "encoding": "o200k_base",
+  "cache_size": 157838,
+  "table_counts_by_provider": {
+    "conversations": {
+      "chatgpt": 1439,
+      "claude": 757
+    },
+    "messages": {
+      "chatgpt": 169397,
+      "claude": 5589
+    },
+    "distilled_conversations": {
+      "chatgpt": 1326,
+      "claude": 652
+    }
+  },
+  "all_non_system_exact": {
+    "token_by_provider": {
+      "chatgpt": 115334978,
+      "claude": 3008283
+    },
+    "message_count_by_provider": {
+      "chatgpt": 169397,
+      "claude": 5589
+    },
+    "token_total_non_system": 118343261,
+    "message_total_non_system": 174986
+  },
+  "distilled_non_system_exact": {
+    "token_by_provider": {
+      "chatgpt": 104760697,
+      "claude": 2307655
+    },
+    "message_count_by_provider": {
+      "chatgpt": 161429,
+      "claude": 4475
+    },
+    "token_total_non_system": 107068352,
+    "message_total_non_system": 165904
+  }
+}

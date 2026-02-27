@@ -1,0 +1,142 @@
+{
+  "generated_at": "2026-02-27T06:22:18.919145+00:00",
+  "main_db": "reports/main/moonshine_mash_active.db",
+  "merge_sequence": [
+    "qwen_20260226_063147",
+    "deepseek_20260226_063139"
+  ],
+  "baseline_table_counts": {
+    "conversations": 2196,
+    "messages": 174986,
+    "distilled_conversations": 1978
+  },
+  "final_table_counts": {
+    "conversations": 2591,
+    "messages": 177837,
+    "distilled_conversations": 2349
+  },
+  "actual_deltas": {
+    "conversations": 395,
+    "messages": 2851,
+    "distilled_conversations": 371
+  },
+  "expected_additions_from_provider_sources": {
+    "conversations": 395,
+    "messages": 2851,
+    "distilled_conversations": 371
+  },
+  "delta_match": {
+    "conversations": true,
+    "messages": true,
+    "distilled_conversations": true
+  },
+  "provider_coverage": {
+    "qwen": {
+      "conversations": {
+        "source_rows": 75,
+        "missing_in_main": 0,
+        "fully_present": true
+      },
+      "messages": {
+        "source_rows": 778,
+        "missing_in_main": 0,
+        "fully_present": true
+      },
+      "distilled_conversations": {
+        "source_rows": 67,
+        "missing_in_main": 0,
+        "fully_present": true
+      }
+    },
+    "deepseek": {
+      "conversations": {
+        "source_rows": 320,
+        "missing_in_main": 0,
+        "fully_present": true
+      },
+      "messages": {
+        "source_rows": 2073,
+        "missing_in_main": 0,
+        "fully_present": true
+      },
+      "distilled_conversations": {
+        "source_rows": 304,
+        "missing_in_main": 0,
+        "fully_present": true
+      }
+    }
+  },
+  "record_uid_collisions": {
+    "conversations": 0,
+    "messages": 0,
+    "distilled_conversations": 0
+  },
+  "quick_check": "ok",
+  "merge_manifest": {
+    "provider": "deepseek",
+    "run_id": "deepseek_20260226_063139",
+    "all_pass": true
+  },
+  "exact_recount_summary": {
+    "all_non_system_exact": {
+      "token_by_provider": {
+        "chatgpt": 115334978,
+        "claude": 3008283,
+        "deepseek": 1482829,
+        "qwen": 1017719
+      },
+      "message_count_by_provider": {
+        "chatgpt": 169397,
+        "claude": 5589,
+        "deepseek": 2073,
+        "qwen": 778
+      },
+      "token_total_non_system": 120843809,
+      "message_total_non_system": 177837
+    },
+    "distilled_non_system_exact": {
+      "token_by_provider": {
+        "chatgpt": 104760697,
+        "claude": 2307655,
+        "deepseek": 1390597,
+        "qwen": 962599
+      },
+      "message_count_by_provider": {
+        "chatgpt": 161429,
+        "claude": 4475,
+        "deepseek": 2015,
+        "qwen": 726
+      },
+      "token_total_non_system": 109421548,
+      "message_total_non_system": 168645
+    },
+    "table_counts_by_provider": {
+      "conversations": {
+        "chatgpt": 1439,
+        "claude": 757,
+        "deepseek": 320,
+        "qwen": 75
+      },
+      "messages": {
+        "chatgpt": 169397,
+        "claude": 5589,
+        "deepseek": 2073,
+        "qwen": 778
+      },
+      "distilled_conversations": {
+        "chatgpt": 1326,
+        "claude": 652,
+        "deepseek": 304,
+        "qwen": 67
+      }
+    }
+  },
+  "checks": {
+    "quick_check_ok": true,
+    "record_uid_collisions_zero": true,
+    "provider_rows_fully_present": true,
+    "expected_vs_actual_deltas_match": true,
+    "merge_manifest_all_pass": true,
+    "all_checks_pass": true
+  }
+}

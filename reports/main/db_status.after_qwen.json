@@ -1,0 +1,29 @@
+{
+  "table_counts": {
+    "conversations": 2271,
+    "messages": 175764,
+    "distilled_conversations": 2045
+  },
+  "provider_counts": {
+    "conversations": {
+      "chatgpt": 1439,
+      "claude": 757,
+      "qwen": 75
+    },
+    "messages": {
+      "chatgpt": 169397,
+      "claude": 5589,
+      "qwen": 778
+    },
+    "distilled_conversations": {
+      "chatgpt": 1326,
+      "claude": 652,
+      "qwen": 67
+    }
+  },
+  "record_uid_collisions": {
+    "conversations": 0,
+    "messages": 0,
+    "distilled_conversations": 0
+  }
+}

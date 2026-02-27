@@ -1,0 +1,37 @@
+{
+  "db_path": "reports/main/moonshine_mash_active.db",
+  "table_counts": {
+    "conversations": 2196,
+    "messages": 174986,
+    "distilled_conversations": 1978
+  },
+  "provider_counts": {
+    "conversations": {
+      "chatgpt": 1439,
+      "claude": 757
+    },
+    "messages": {
+      "chatgpt": 169397,
+      "claude": 5589
+    },
+    "distilled_conversations": {
+      "chatgpt": 1326,
+      "claude": 652
+    }
+  },
+  "token_sums_by_provider": {
+    "conversations_total_tokens": {
+      "chatgpt": 51524462,
+      "claude": 2533550
+    },
+    "distilled_total_tokens": {
+      "chatgpt": 104321772,
+      "claude": 87638139
+    }
+  },
+  "record_uid_collisions": {
+    "conversations": 0,
+    "messages": 0,
+    "distilled_conversations": 0
+  }
+}

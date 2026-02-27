@@ -581,3 +581,14 @@ For public teaser operations, include root wiki surface in the index chain:
 4. `docs/Moonshine-Documentation-Index.md`
 
 `WIKI.md` is intended as a concise external navigation layer while this index remains the full internal documentation map.
+
+## Main-Lane Evidence Addendum (2026-02-27)
+
+For the completed qwen/deepseek promotion wave, use this evidence chain:
+
+1. `PROJECT_DATABASE_DOCUMENTATION.md`
+2. `reports/main/final_db_pass_20260227.md`
+3. `reports/main/final_db_pass_20260227.json`
+4. `reports/main/token_recount.main.postdeps.json`
+5. `reports/main/merge_manifest.main.json`
+

@@ -1,0 +1,46 @@
+{
+  "table_counts": {
+    "conversations": 2591,
+    "messages": 177837,
+    "distilled_conversations": 2349
+  },
+  "provider_counts": {
+    "conversations": {
+      "chatgpt": 1439,
+      "claude": 757,
+      "deepseek": 320,
+      "qwen": 75
+    },
+    "messages": {
+      "chatgpt": 169397,
+      "claude": 5589,
+      "deepseek": 2073,
+      "qwen": 778
+    },
+    "distilled_conversations": {
+      "chatgpt": 1326,
+      "claude": 652,
+      "deepseek": 304,
+      "qwen": 67
+    }
+  },
+  "record_uid_collisions": {
+    "conversations": 0,
+    "messages": 0,
+    "distilled_conversations": 0
+  },
+  "token_sums_by_provider": {
+    "conversations_total_tokens": {
+      "chatgpt": 51524462,
+      "claude": 2533550,
+      "deepseek": 898650,
+      "qwen": 611601
+    },
+    "distilled_total_tokens": {
+      "chatgpt": 104321772,
+      "claude": 87638139,
+      "deepseek": 106481903,
+      "qwen": 108093690
+    }
+  }
+}

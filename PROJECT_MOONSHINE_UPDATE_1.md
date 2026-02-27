@@ -684,3 +684,54 @@ There is still no forced final dataset output format at this stage. The `.db` re
 
 **Update 1C Classification:** Internal  
 **Release Signal:** Forward (main lane now layered and rollback-safe)
+
+## UPDATE 1D â€” MAIN-LANE PROVIDER PROMOTION COMPLETE (2026-02-27)
+
+### Summary
+
+The Phase 2 provider promotion wave is complete in locked order:
+
+1. `qwen_20260226_063147`
+2. `deepseek_20260226_063139`
+
+Both dry-run and live merge passes succeeded with gate compliance.
+
+### Current Main DB State
+
+- authority DB: `reports/main/moonshine_mash_active.db`
+- conversations: `2591`
+- messages: `177837`
+- distilled_conversations: `2349`
+
+Provider composition:
+
+- conversations: chatgpt `1439`, claude `757`, deepseek `320`, qwen `75`
+- messages: chatgpt `169397`, claude `5589`, deepseek `2073`, qwen `778`
+- distilled_conversations: chatgpt `1326`, claude `652`, deepseek `304`, qwen `67`
+
+### Integrity and Idempotence
+
+- `record_uid` collisions: `0` across `conversations`, `messages`, `distilled_conversations`
+- SQLite quick check: `ok`
+- post-merge dry-runs confirm idempotence (`would_insert=0` for qwen and deepseek)
+- source-row coverage validation confirms all provider source rows are present in main
+
+### Exact Token Recount (o200k_base)
+
+All non-system exact tokens:
+
+- chatgpt: `115,334,978`
+- claude: `3,008,283`
+- deepseek: `1,482,829`
+- qwen: `1,017,719`
+- total: `120,843,809`
+
+### Evidence Artifacts
+
+- `reports/main/final_db_pass_20260227.json`
+- `reports/main/final_db_pass_20260227.md`
+- `reports/main/token_recount.main.postdeps.json`
+- `reports/main/db_baseline.pre_qwen_deepseek.json`
+- `reports/main/db_status.after_qwen.json`
+- `reports/main/db_status.final_qwen_deepseek.json`
+
