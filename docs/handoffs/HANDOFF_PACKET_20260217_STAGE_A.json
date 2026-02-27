@@ -1,0 +1,68 @@
+{
+  "run_id": "moonshine_mash_distill_20260217_r1",
+  "stage_id": "stage_a_builder_v1",
+  "role": "builder_executor",
+  "state_hash_in": "source_sha256:4e6d44cd2102d26701858f832ba325e15d3490e61397013b7896a22dfad792dd",
+  "state_hash_out": "stage_a:1249fc982920b24bc4a7f90be1c22ad2",
+  "files_changed": [
+    "token_forensics_agents.py",
+    "token_forensics_orchestrator.py",
+    "scripts/run_validation.py"
+  ],
+  "verification": {
+    "checks": [
+      "DataProfilerAgent._extract_conversations now handles list and dict export formats",
+      "Added _generate_token_ledger method to orchestrator with 4 canonical counters",
+      "Updated run_validation.py to validate token_ledger.json",
+      "Tested dual format extraction: both formats return messages correctly"
+    ],
+    "status": "pass",
+    "evidence": [
+      "list_format_test: 1 message extracted",
+      "dict_format_test: 1 message extracted",
+      "token_ledger counters: raw_json_tokens, content_tokens_non_system, content_tokens_cleaned, distilled_tokens_selected"
+    ]
+  },
+  "result": {
+    "summary": "Stage A implementation complete: ingestion parity for dual ChatGPT export formats, canonical token ledger generation added, validation updated for ledger compliance.",
+    "artifacts": [
+      "token_forensics_agents.py (fixed _extract_conversations)",
+      "token_forensics_orchestrator.py (added _generate_token_ledger)",
+      "scripts/run_validation.py (added validate_token_ledger)"
+    ],
+    "risks": [
+      "token_ledger.json not yet generated on disk - requires full pipeline run",
+      "Legacy repro_manifest.json in reports/ has placeholder checksums - needs overwrite",
+      "content_tokens_cleaned and distilled_tokens_selected counters are NULL pending Stage B"
+    ]
+  },
+  "next_actions": [
+    "Run full token forensics pipeline to generate token_ledger.json",
+    "Hand Stage B contract to Kimi Code agent for Moonshine analyzer alignment",
+    "Stage B to set content_tokens_cleaned counter based on policy filtering",
+    "Collect both builder packets and return for Stage C planner drift review"
+  ],
+  "signal_type": "forward",
+  "coverage": {
+    "selected_tools": [
+      "bb7_exo_bootstrap",
+      "bb7_exo_list_tool_categories",
+      "bb7_exo_category_specific_tools",
+      "bb7_exo_route",
+      "bb7_exo_plan",
+      "bb7_read_file",
+      "bb7_list_directory",
+      "bb7_write_file",
+      "bb7_exo_reflect",
+      "bb7_memory_store",
+      "edit",
+      "bash"
+    ],
+    "unused_categories": [
+      "visual",
+      "web",
+      "sessions"
+    ],
+    "rationale": "Stage A was code implementation and validation; visual/web/session operations were not required."
+  }
+}

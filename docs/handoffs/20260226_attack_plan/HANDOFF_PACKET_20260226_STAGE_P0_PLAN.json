@@ -1,0 +1,58 @@
+{
+  "run_id": "moonshine_attack_plan_20260226",
+  "stage_id": "stage_p0_mission_lock_v1",
+  "role": "planner_reasoner",
+  "state_hash_in": "user_intent:planner_first_distributed_execution_2026-02-26",
+  "state_hash_out": "p0_locked:scope_owners_handoff_protocol",
+  "files_changed": [
+    "docs/handoffs/20260226_attack_plan/ATTACK_PLAN_20260226.md",
+    "docs/handoffs/20260226_attack_plan/HANDOFF_PACKET_20260226_STAGE_P0_PLAN.json"
+  ],
+  "verification": {
+    "checks": [
+      "Scope lock written: next-provider onboarding readiness only",
+      "Role lock written: Codex planner, OpenCode builder, Claude finisher",
+      "Directory lock written for stage artifacts",
+      "Handoff packet protocol lock written"
+    ],
+    "status": "pass",
+    "evidence": [
+      "Attack plan document created under docs/handoffs/20260226_attack_plan",
+      "Stage map includes P0/P1/B1/C1/F1/C2",
+      "Signal protocol explicitly constrained to forward/revision_request/escalation"
+    ]
+  },
+  "result": {
+    "summary": "Mission, stage topology, and ownership model are now frozen for tonight's distributed run.",
+    "artifacts": [
+      "docs/handoffs/20260226_attack_plan/ATTACK_PLAN_20260226.md"
+    ],
+    "risks": [
+      "Execution drift if OpenCode modifies schema without matching gate evidence",
+      "Documentation drift if finisher edits claims without reconciled verification outputs"
+    ]
+  },
+  "next_actions": [
+    "Execute P1 schema and gate contract drafting",
+    "Pass P1 packet to OpenCode as authoritative implementation contract",
+    "Require OpenCode to emit schema-valid B1 packet with file list and command evidence"
+  ],
+  "signal_type": "forward",
+  "coverage": {
+    "selected_tools": [
+      "bb7_exo_bootstrap",
+      "bb7_exo_list_tool_categories",
+      "bb7_exo_category_specific_tools",
+      "bb7_memory_intelligent_search",
+      "bb7_exo_route",
+      "bb7_exo_plan",
+      "bb7_write_file"
+    ],
+    "unused_categories": [
+      "web",
+      "visual",
+      "analysis"
+    ],
+    "rationale": "P0 is contract and orchestration planning; no code execution or web/visual work required."
+  }
+}

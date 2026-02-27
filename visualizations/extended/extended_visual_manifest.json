@@ -1,0 +1,19 @@
+{
+  "generated_from": [
+    "D:\\distill_the_flow\\reports\\token_forensics.json",
+    "D:\\distill_the_flow\\reports\\moonshine_corpus.db"
+  ],
+  "output_dir": "D:\\distill_the_flow\\visualizations\\extended",
+  "count": 9,
+  "files": [
+    "cumulative_token_growth.png",
+    "monthly_message_volume.png",
+    "monthly_tokens_millions.png",
+    "monthly_tokens_vs_messages_scatter.png",
+    "period_quality_signals.png",
+    "role_distribution_pie.png",
+    "tone_cluster_distribution.png",
+    "top15_conversations_tokens.png",
+    "top_topics_barh.png"
+  ]
+}

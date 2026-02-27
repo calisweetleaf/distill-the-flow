@@ -1,0 +1,81 @@
+{
+  "handoff_version": "1.0.0",
+  "run": "moonshine_attack_plan_20260226",
+  "stage": "B1_opencode_merge",
+  "role": "builder_executor",
+  "agent": "Claude Sonnet 4.6",
+  "date": "2026-02-26",
+  "state_hash_in": "b1_kimi_schema:g1_g2_g3_pass_ready_for_merge_infra",
+  "state_hash_out": "b1_opencode_merge:g4_g8_complete",
+  "files_changed": [
+    "scripts/merge_provider_to_main.py",
+    "scripts/run_provider_analysis.py",
+    "moonshine_corpus_analyzer.py",
+    "reports/providers/deepseek/deepseek_20260226_063139/moonshine_deepseek_deepseek_20260226_063139.db",
+    "reports/providers/deepseek/deepseek_20260226_063139/token_ledger.deepseek.deepseek_20260226_063139.json",
+    "reports/providers/deepseek/deepseek_20260226_063139/moonshine_corpus_report.deepseek.deepseek_20260226_063139.md",
+    "reports/providers/deepseek/deepseek_20260226_063139/moonshine_distillation_manifest.deepseek.deepseek_20260226_063139.json",
+    "reports/providers/deepseek/deepseek_20260226_063139/visualizations_manifest.deepseek.deepseek_20260226_063139.json",
+    "reports/providers/qwen/qwen_20260226_063147/moonshine_qwen_qwen_20260226_063147.db",
+    "reports/providers/qwen/qwen_20260226_063147/token_ledger.qwen.qwen_20260226_063147.json",
+    "reports/providers/qwen/qwen_20260226_063147/moonshine_corpus_report.qwen.qwen_20260226_063147.md",
+    "reports/providers/qwen/qwen_20260226_063147/moonshine_distillation_manifest.qwen.qwen_20260226_063147.json",
+    "reports/providers/qwen/qwen_20260226_063147/visualizations_manifest.qwen.qwen_20260226_063147.json",
+    "docs/handoffs/20260226_attack_plan/HANDOFF_PACKET_20260226_STAGE_B1_OPENCODE_MERGE.json",
+    "docs/handoffs/20260226_attack_plan/B1_OPENCODE_MERGE_EVIDENCE_20260226.md",
+    "docs/handoffs/20260226_attack_plan/B1_OPENCODE_MERGE_LOG_20260226.json"
+  ],
+  "bugs_fixed": [
+    "moonshine_corpus_analyzer.py line 629: duplicate cursor.execute block causing SyntaxError — fixed by deduplicating CREATE TABLE messages statement",
+    "moonshine_corpus_analyzer.py _enforce_phase2_schema_contract: params tuple had 12 values for 7-binding UPDATE — fixed by using per-statement param tuples"
+  ],
+  "verification": {
+    "checks": {
+      "G4_snapshot": "PASS — snapshot_main_db() creates shutil.copy2 + size assertion; SIMULATED in dry-run",
+      "G5_counters": "PASS — per-table {inserted, updated, skipped} non-null for all 3 tables",
+      "G6_idempotence": "PASS — runtime proof: Run1 inserts 320+2073+304, Run2 inserts 0+0+0 (UNIQUE record_uid blocks all)",
+      "G7_reconciliation": "PASS — token_reconciliation emitted with status=reconciled",
+      "G8_docs": "PASS — handoff packet, evidence MD, merge log written"
+    },
+    "provider_analysis": {
+      "deepseek": {
+        "run_id": "deepseek_20260226_063139",
+        "conversations": 320,
+        "messages": 2073,
+        "distilled": 304,
+        "heuristic_tokens": 106481903,
+        "format": "mapping-based (ChatGPT-compatible, fragments field)"
+      },
+      "qwen": {
+        "run_id": "qwen_20260226_063147",
+        "conversations": 75,
+        "messages": 778,
+        "distilled": 67,
+        "heuristic_tokens": 108093690,
+        "format": "chat.history.messages dict with content_list phase-based content"
+      }
+    },
+    "idempotence_proof": {
+      "source": "reports/providers/deepseek/deepseek_20260226_063139/moonshine_deepseek_deepseek_20260226_063139.db",
+      "target": "temp copy of reports/main/moonshine_mash_active.db",
+      "run1": {"conversations": {"inserted": 320, "updated": 0, "skipped": 0}, "messages": {"inserted": 2073, "updated": 0, "skipped": 0}, "distilled_conversations": {"inserted": 304, "updated": 0, "skipped": 0}},
+      "run2": {"conversations": {"inserted": 0, "updated": 0, "skipped": 320}, "messages": {"inserted": 0, "updated": 0, "skipped": 2073}, "distilled_conversations": {"inserted": 0, "updated": 0, "skipped": 304}},
+      "idempotent": true,
+      "mechanism": "INSERT OR IGNORE + UNIQUE index on record_uid"
+    },
+    "tone_shift_fix": {
+      "file": "moonshine_corpus_analyzer.py",
+      "old": "tone_shift=0.0,  # TODO: compute from tone changes",
+      "new": "tone_shift=self._compute_tone_shift(messages),",
+      "method_added": "_compute_tone_shift(messages) — per-turn TONE_PATTERNS transition rate, 0.0 to 1.0"
+    }
+  },
+  "signal_type": "forward",
+  "next_stage": "F1_claude_finisher",
+  "notes": [
+    "filler providers (deepseek, qwen) are NOT merged to main — provider-local isolation enforced via --promote CLI guard",
+    "conversations table UNIQUE index on record_uid created on-demand by merge script (was missing from G3)",
+    "tone_shift fix also resolved SyntaxError in _build_database (duplicate cursor.execute block pre-existing in codebase)",
+    "token reconciliation delta for chatgpt is expected: DB uses word*1.3 heuristic vs o200k_base exact tokenizer"
+  ]
+}

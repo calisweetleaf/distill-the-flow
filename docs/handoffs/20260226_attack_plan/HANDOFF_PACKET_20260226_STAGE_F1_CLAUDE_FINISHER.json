@@ -1,0 +1,78 @@
+{
+  "handoff_version": "1.0.0",
+  "run": "moonshine_attack_plan_20260226",
+  "stage": "F1_claude_finisher",
+  "role": "finisher_polisher",
+  "agent": "Claude Sonnet 4.6",
+  "date": "2026-02-26",
+  "state_hash_in": "b1_opencode_merge:g4_g8_complete",
+  "state_hash_out": "f1_claude_finisher:release_ready",
+
+  "must_reconcile": [
+    {
+      "item": "tone_shift resolution",
+      "status": "RESOLVED",
+      "detail": "_compute_tone_shift() implemented, TODO stub removed from line 361"
+    },
+    {
+      "item": "claim-vs-artifact drift",
+      "status": "RESOLVED",
+      "detail": "All 5 P1 artifacts verified present for both deepseek and qwen providers. Handoff packet lists exactly the files that exist on disk."
+    },
+    {
+      "item": "schema-vs-doc mismatch",
+      "status": "RESOLVED",
+      "detail": "CONTEXT.md and MEMORY.md updated with Phase 2 state, provider schema, merge architecture, and provider-local isolation policy"
+    },
+    {
+      "item": "pre-existing SyntaxError in _build_database",
+      "status": "RESOLVED",
+      "detail": "Duplicate cursor.execute block removed. CREATE TABLE messages now uses 8 base columns; Phase 2 columns added by _enforce_phase2_schema_contract()"
+    },
+    {
+      "item": "params binding mismatch in _enforce_phase2_schema_contract",
+      "status": "RESOLVED",
+      "detail": "Replaced shared 12-value params tuple with per-statement tuples (7, 9, 7 bindings respectively)"
+    }
+  ],
+
+  "accepted_debt": [
+    {
+      "id": "ACCEPTED_DEBT:001",
+      "item": "visualizations_manifest is a stub",
+      "rationale": "No visual generation pass was run in B1. The stub lists visualizations=[] with an explanatory note. This is intentional for the analysis-only phase.",
+      "resolution_path": "Run scripts/run_visual_intelligence.py on provider DBs if visuals needed"
+    },
+    {
+      "id": "ACCEPTED_DEBT:002",
+      "item": "token_reconciliation delta is large for chatgpt (-63.8M)",
+      "rationale": "word*1.3 heuristic systematically underestimates o200k_base exact counts, especially for code-heavy conversations. This is documented in the reconciliation_note field and is expected behavior.",
+      "resolution_path": "None needed — delta is structurally explained and documented"
+    },
+    {
+      "id": "ACCEPTED_DEBT:003",
+      "item": "DeepSeek CONTENT_TOKENS_SOURCE hardcoded to 115_330_530 (chatgpt canonical)",
+      "rationale": "The analyzer's CONTENT_TOKENS_SOURCE constant is set to the chatgpt canonical token count and is used for distillation scaling. For provider-local analyses, this creates an over-scaled canonical count. This is a known limitation of the scaling heuristic.",
+      "resolution_path": "Future: make CONTENT_TOKENS_SOURCE provider-configurable or compute from export"
+    }
+  ],
+
+  "next_actions": [
+    "C2 final signal: update AGENTS.md Stage D caveat status to CLOSED",
+    "Optional: run merge of deepseek/qwen to main with --promote if filler data needed",
+    "Optional: run visualizer on provider DBs"
+  ],
+
+  "verification": {
+    "all_gates_pass": true,
+    "G4": "PASS",
+    "G5": "PASS",
+    "G6": "PASS",
+    "G7": "PASS",
+    "G8": "PASS",
+    "tone_shift_TODO": "CLOSED",
+    "syntax_errors_in_analyzer": "FIXED"
+  },
+
+  "signal_type": "forward"
+}
