@@ -1,0 +1,37 @@
+{
+  "artifacts_check": {
+    "passed": true,
+    "required_count": 9,
+    "found_count": 9,
+    "missing_artifacts": []
+  },
+  "schema_integrity_check": {
+    "passed": true,
+    "row_counts": {
+      "conversations": 5589,
+      "quality_scores": 5589,
+      "pii_results": 5589,
+      "dedup_results": 5589
+    },
+    "expected_count": 5589
+  },
+  "count_consistency_check": {
+    "passed": true,
+    "data_profile_count": 5589,
+    "conversations_count": 5589
+  },
+  "reproducibility_check": {
+    "passed": true,
+    "reproducibility_hash": "ade0012f85ba5f99a406e59bd17e52f31194c543ac52271f6dbc1874c6d7238b"
+  },
+  "quality_gates": {
+    "passed": true,
+    "gates": {
+      "mean_quality_above_0.5": true,
+      "low_quality_rate_below_0.3": true
+    },
+    "mean_quality_score": 0.9082367238200085,
+    "low_quality_rate": 0.0
+  },
+  "overall_status": "PASS"
+}

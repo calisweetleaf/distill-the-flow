@@ -1,30 +1,24 @@
 {
-  "generated_at": "2026-02-27T06:21:16.487912+00:00",
+  "generated_at": "2026-02-27T07:31:50.556244+00:00",
   "db_path": "reports/main/moonshine_mash_active.db",
   "encoding": "o200k_base",
-  "method": "incremental_exact_merge_on_premerge_baseline",
-  "baseline_source": "reports/main/token_recount.main.postdeps.json",
-  "incremental_providers": [
-    "qwen",
-    "deepseek"
-  ],
-  "cache_size": 2714,
+  "cache_size": 162517,
   "table_counts_by_provider": {
     "conversations": {
       "chatgpt": 1439,
-      "claude": 757,
+      "claude": 954,
       "deepseek": 320,
       "qwen": 75
     },
     "messages": {
       "chatgpt": 169397,
-      "claude": 5589,
+      "claude": 7726,
       "deepseek": 2073,
       "qwen": 778
     },
     "distilled_conversations": {
       "chatgpt": 1326,
-      "claude": 652,
+      "claude": 789,
       "deepseek": 304,
       "qwen": 67
     }
@@ -32,33 +26,33 @@
   "all_non_system_exact": {
     "token_by_provider": {
       "chatgpt": 115334978,
-      "claude": 3008283,
+      "claude": 4791566,
       "deepseek": 1482829,
       "qwen": 1017719
     },
     "message_count_by_provider": {
       "chatgpt": 169397,
-      "claude": 5589,
+      "claude": 7726,
       "deepseek": 2073,
       "qwen": 778
     },
-    "token_total_non_system": 120843809,
-    "message_total_non_system": 177837
+    "token_total_non_system": 122627092,
+    "message_total_non_system": 179974
   },
   "distilled_non_system_exact": {
     "token_by_provider": {
       "chatgpt": 104760697,
-      "claude": 2307655,
+      "claude": 3425152,
       "deepseek": 1390597,
       "qwen": 962599
     },
     "message_count_by_provider": {
       "chatgpt": 161429,
-      "claude": 4475,
+      "claude": 6010,
       "deepseek": 2015,
       "qwen": 726
     },
-    "token_total_non_system": 109421548,
-    "message_total_non_system": 168645
+    "token_total_non_system": 110539045,
+    "message_total_non_system": 170180
   }
 }

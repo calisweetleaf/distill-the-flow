@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "created_at": "2026-02-17T00:00:00Z",
+  "source_sha256": "4e6d44cd2102d26701858f832ba325e15d3490e61397013b7896a22dfad792dd",
+  "source_path": "02-14-26-ChatGPT/conversations.json",
+  "tokenizer": "o200k_base",
+  "parsing_scope": "message_content_non_system",
+  "counters": {
+    "raw_json_tokens": null,
+    "content_tokens_non_system": 115330530,
+    "content_tokens_cleaned": 104321772,
+    "distilled_tokens_selected": 104321772
+  },
+  "notes": {
+    "raw_json_tokens": "Full file tokenization including JSON structure (tiktoken not run; null accepted by validator)",
+    "content_tokens_non_system": "User/assistant/tool message content only, excludes system messages \u2014 from reports/token_forensics.json (streaming ijson o200k_base run on 2026-02-16)",
+    "content_tokens_cleaned": "Post-policy filtering (computed by distillation stage)",
+    "distilled_tokens_selected": "Final training/query subset (computed by distillation stage \u2014 to be filled by Stage B repair)"
+  },
+  "run_id": "moonshine_mash_distill_20260217_r1",
+  "pipeline_version": "1.0.0",
+  "provenance": {
+    "method": "sourced from reports/token_forensics.json (real pipeline run 2026-02-16)",
+    "token_forensics_report_version": "2.1.0-real-export-streaming",
+    "token_forensics_generated_at": "2026-02-16T03:42:42.297634+00:00",
+    "source_type": "ChatGPT export conversations list",
+    "parse_mode": "streaming_ijson",
+    "total_conversations": 1439,
+    "total_messages": 169397
+  },
+  "distillation_run_id": "moonshine_20260217_100144",
+  "distillation_timestamp": "2026-02-17T10:03:11.434203+00:00"
+}

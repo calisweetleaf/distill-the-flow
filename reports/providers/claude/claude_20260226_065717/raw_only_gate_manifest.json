@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-02-26T07:22:12.150744Z",
+  "profile": "raw_only",
+  "gates": {
+    "R1_banned_sources": {
+      "verdict": "PASS",
+      "detail": "No 'source' column in parquet \u2014 raw ChatGPT export confirmed, no banned sources"
+    },
+    "R2_split_fingerprint": {
+      "verdict": "PASS",
+      "detail": "No 'split' column in parquet \u2014 raw ChatGPT export confirmed, no synthetic split"
+    },
+    "R3_synthetic_signature": {
+      "verdict": "PASS",
+      "detail": "No synthetic 10k+banned-sources signature"
+    },
+    "R4_token_ledger_consistency": {
+      "verdict": "SKIP",
+      "detail": "One or both token counts are None; gate skipped"
+    },
+    "R5_source_hash_match": {
+      "verdict": "SKIP",
+      "detail": "token_ledger.json or conversations.json not found; gate skipped"
+    }
+  },
+  "overall": "PASS",
+  "validation_overall": "PASS"
+}

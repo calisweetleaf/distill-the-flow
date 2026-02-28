@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-02-26T07:00:51.017766+00:00",
+  "source_reports": [
+    "C:\\Users\\treyr\\Desktop\\Dev-Drive\\distill_the_flow\\reports\\providers\\claude\\claude_20260226_065717\\token_forensics.json",
+    "C:\\Users\\treyr\\Desktop\\Dev-Drive\\distill_the_flow\\reports\\providers\\claude\\claude_20260226_065717\\quality_risk_report.json",
+    "C:\\Users\\treyr\\Desktop\\Dev-Drive\\distill_the_flow\\reports\\providers\\claude\\claude_20260226_065717\\pii_safety_report.json",
+    "C:\\Users\\treyr\\Desktop\\Dev-Drive\\distill_the_flow\\reports\\providers\\claude\\claude_20260226_065717\\cost_projection.json"
+  ],
+  "artifacts": {
+    "payload": "C:\\Users\\treyr\\Desktop\\Dev-Drive\\distill_the_flow\\reports\\providers\\claude\\claude_20260226_065717\\visuals\\atlas_payload.json",
+    "dashboard": "C:\\Users\\treyr\\Desktop\\Dev-Drive\\distill_the_flow\\reports\\providers\\claude\\claude_20260226_065717\\visuals\\strategic_command_atlas.html"
+  },
+  "meta": {
+    "title": "Strategic Command Atlas",
+    "generated_at": "2026-02-26T07:00:51.014766+00:00",
+    "dataset_total_samples": 0,
+    "dataset_total_tokens": 115330530
+  },
+  "sections": [
+    "capability_constellation",
+    "truncation_stress_surface",
+    "risk_language_topology",
+    "quality_risk_phase_space",
+    "cost_regime_matrix",
+    "intervention_flow_geometry"
+  ]
+}

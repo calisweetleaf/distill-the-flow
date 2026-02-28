@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-02-26T06:50:21.516356+00:00",
+  "source_reports": [
+    "D:\\distill_the_flow\\reports\\token_forensics.json",
+    "D:\\distill_the_flow\\reports\\quality_risk_report.json",
+    "D:\\distill_the_flow\\reports\\pii_safety_report.json",
+    "D:\\distill_the_flow\\reports\\cost_projection.json"
+  ],
+  "artifacts": {
+    "payload": "D:\\distill_the_flow\\reports\\visuals\\atlas_payload.json",
+    "dashboard": "D:\\distill_the_flow\\reports\\visuals\\strategic_command_atlas.html"
+  },
+  "meta": {
+    "title": "Strategic Command Atlas",
+    "generated_at": "2026-02-26T06:50:21.514344+00:00",
+    "dataset_total_samples": 0,
+    "dataset_total_tokens": 115330530
+  },
+  "sections": [
+    "capability_constellation",
+    "truncation_stress_surface",
+    "risk_language_topology",
+    "quality_risk_phase_space",
+    "cost_regime_matrix",
+    "intervention_flow_geometry"
+  ]
+}

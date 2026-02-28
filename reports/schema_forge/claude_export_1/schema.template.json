@@ -1,0 +1,235 @@
+[
+  {
+    "uuid?": "str",
+    "name?": "str",
+    "created_at?": "str",
+    "updated_at?": "str",
+    "account?": {
+      "uuid?": "str"
+    },
+    "chat_messages?": [
+      {
+        "uuid?": "str",
+        "text?": "str",
+        "content?": [
+          {
+            "start_timestamp?": [
+              "str",
+              "null"
+            ],
+            "stop_timestamp?": [
+              "str",
+              "null"
+            ],
+            "type?": "str",
+            "text?": "str",
+            "citations?": [
+              {
+                "uuid?": "str",
+                "start_index?": "int",
+                "end_index?": "int",
+                "details?": {
+                  "type?": "str",
+                  "url?": "str"
+                }
+              }
+            ],
+            "thinking?": "str",
+            "summaries?": [
+              {
+                "summary?": "str"
+              }
+            ],
+            "cut_off?": "bool",
+            "name?": "str",
+            "input?": {
+              "query?": "str",
+              "id?": "str",
+              "type?": "str",
+              "title?": "str",
+              "command?": "str",
+              "content?": "str",
+              "language?": [
+                "str",
+                "null"
+              ],
+              "version_uuid?": "str",
+              "max_text_results?": "int",
+              "new_str?": "str",
+              "old_str?": "str",
+              "path?": "str",
+              "body?": "str",
+              "kind?": "str",
+              "summary_title?": "str",
+              "pattern?": "str",
+              "paths?": [
+                "str"
+              ],
+              "edits?": [
+                {
+                  "newText?": "str",
+                  "oldText?": "str",
+                  "new_text?": "str",
+                  "old_text?": "str"
+                }
+              ],
+              "code?": "str",
+              "dryRun?": "bool",
+              "source?": "str",
+              "md_citations?": [
+                {
+                  "url?": "str",
+                  "uuid?": "str",
+                  "title?": "str",
+                  "sources?": [
+                    {
+                      "url?": "str",
+                      "uuid?": "str",
+                      "title?": "str",
+                      "source?": "str",
+                      "icon_url?": "str",
+                      "subtitles?": "null",
+                      "content_body?": "null",
+                      "resource_type?": "null"
+                    }
+                  ],
+                  "metadata?": {
+                    "type?": "str",
+                    "uuid?": "str",
+                    "source?": "str",
+                    "icon_url?": "str",
+                    "preview_title?": "str"
+                  },
+                  "end_index?": "int",
+                  "start_index?": "int",
+                  "origin_tool_name?": "str"
+                }
+              ],
+              "use_vision?": "bool",
+              "api_query?": "str",
+              "semantic_query?": "str",
+              "name?": "str",
+              "updates?": "str",
+              "url?": "str"
+            },
+            "message?": [
+              "str",
+              "null"
+            ],
+            "integration_name?": [
+              "str",
+              "null"
+            ],
+            "integration_icon_url?": [
+              "str",
+              "null"
+            ],
+            "context?": "null",
+            "display_content?": [
+              {
+                "type?": "str",
+                "table?": [
+                  [
+                    "str"
+                  ]
+                ],
+                "content?": [
+                  {
+                    "title?": "str",
+                    "subtitles?": [
+                      [
+                        "str"
+                      ],
+                      "null"
+                    ],
+                    "url?": [
+                      "str",
+                      "null"
+                    ],
+                    "resource_type?": "str",
+                    "icon_url?": [
+                      "str",
+                      "null"
+                    ],
+                    "source?": [
+                      "str",
+                      "null"
+                    ]
+                  }
+                ],
+                "link?": {
+                  "title?": "str",
+                  "subtitles?": "null",
+                  "url?": "str",
+                  "resource_type?": "null",
+                  "icon_url?": "str",
+                  "source?": "str"
+                },
+                "is_trusted?": "bool"
+              },
+              "null"
+            ],
+            "approval_options?": "null",
+            "approval_key?": "null",
+            "content?": [
+              {
+                "type?": "str",
+                "title?": "str",
+                "url?": "str",
+                "metadata?": {
+                  "type?": "str",
+                  "site_domain?": "str",
+                  "favicon_url?": "str",
+                  "site_name?": "str"
+                },
+                "is_missing?": "bool",
+                "text?": "str",
+                "is_citable?": "bool",
+                "prompt_context_metadata?": {
+                  "url?": "str",
+                  "age?": "str",
+                  "content_type?": "str"
+                },
+                "uuid?": "str",
+                "file_uuid?": "str",
+                "doc_uuid?": "str",
+                "ingestion_date?": "str",
+                "start?": "int",
+                "end?": "int",
+                "uri?": "str",
+                "mime_type?": "null",
+                "extras?": {
+                  "uri?": "str",
+                  "owner?": "str",
+                  "title?": "str",
+                  "mime_type?": "str",
+                  "created_time?": "str",
+                  "modified_time?": "str",
+                  "last_modified_by?": "str",
+                  "last_modified_time?": "str"
+                }
+              }
+            ],
+            "is_error?": "bool"
+          }
+        ],
+        "sender?": "str",
+        "created_at?": "str",
+        "updated_at?": "str",
+        "attachments?": [
+          {
+            "file_name?": "str",
+            "file_size?": "int",
+            "file_type?": "str",
+            "extracted_content?": "str"
+          }
+        ],
+        "files?": [
+          {
+            "file_name?": "str"
+          }
+        ]
+      }
+    ]
+  }
+]

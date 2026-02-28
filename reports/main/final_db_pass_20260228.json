@@ -1,0 +1,199 @@
+{
+  "generated_at": "2026-02-28T02:41:46.920593+00:00",
+  "main_db": "reports/main/moonshine_mash_active.db",
+  "authority_artifacts": {
+    "exact_token_recount": "reports/main/token_recount.main.postdeps.json",
+    "prior_final_pass": "reports/main/final_db_pass_20260227.json",
+    "latest_merge_manifest": "reports/main/merge_manifest.main.json",
+    "reports_authority_manifest": "reports/main/reports_authority_manifest.json"
+  },
+  "baseline_checkpoint_20260227": {
+    "table_counts": {
+      "conversations": 2591,
+      "messages": 177837,
+      "distilled_conversations": 2349
+    },
+    "exact_recount": {
+      "all_non_system_total": 120843809,
+      "distilled_non_system_total": 109421548
+    }
+  },
+  "live_state": {
+    "table_counts": {
+      "conversations": 2788,
+      "messages": 179974,
+      "distilled_conversations": 2486
+    },
+    "table_counts_by_provider": {
+      "conversations": {
+        "chatgpt": 1439,
+        "claude": 954,
+        "deepseek": 320,
+        "qwen": 75
+      },
+      "messages": {
+        "chatgpt": 169397,
+        "claude": 7726,
+        "deepseek": 2073,
+        "qwen": 778
+      },
+      "distilled_conversations": {
+        "chatgpt": 1326,
+        "claude": 789,
+        "deepseek": 304,
+        "qwen": 67
+      }
+    },
+    "claude_provider_run_breakdown": {
+      "conversations": {
+        "claude_20260226_065717": 757,
+        "claude_20260227_080825_20260226": 197
+      },
+      "messages": {
+        "claude_20260226_065717": 5589,
+        "claude_20260227_080825_20260226": 2137
+      },
+      "distilled_conversations": {
+        "claude_20260226_065717": 652,
+        "claude_20260227_080825_20260226": 137
+      }
+    },
+    "record_uid_collisions": {
+      "conversations": 0,
+      "messages": 0,
+      "distilled_conversations": 0
+    },
+    "quick_check": "ok"
+  },
+  "delta_vs_20260227_checkpoint": {
+    "table_counts": {
+      "conversations": 197,
+      "messages": 2137,
+      "distilled_conversations": 137
+    },
+    "exact_recount": {
+      "all_non_system_total": 1783283,
+      "distilled_non_system_total": 1117497
+    }
+  },
+  "exact_recount_summary": {
+    "generated_at": "2026-02-27T07:31:50.556244+00:00",
+    "db_path": "reports/main/moonshine_mash_active.db",
+    "encoding": "o200k_base",
+    "cache_size": 162517,
+    "table_counts_by_provider": {
+      "conversations": {
+        "chatgpt": 1439,
+        "claude": 954,
+        "deepseek": 320,
+        "qwen": 75
+      },
+      "messages": {
+        "chatgpt": 169397,
+        "claude": 7726,
+        "deepseek": 2073,
+        "qwen": 778
+      },
+      "distilled_conversations": {
+        "chatgpt": 1326,
+        "claude": 789,
+        "deepseek": 304,
+        "qwen": 67
+      }
+    },
+    "all_non_system_exact": {
+      "token_by_provider": {
+        "chatgpt": 115334978,
+        "claude": 4791566,
+        "deepseek": 1482829,
+        "qwen": 1017719
+      },
+      "message_count_by_provider": {
+        "chatgpt": 169397,
+        "claude": 7726,
+        "deepseek": 2073,
+        "qwen": 778
+      },
+      "token_total_non_system": 122627092,
+      "message_total_non_system": 179974
+    },
+    "distilled_non_system_exact": {
+      "token_by_provider": {
+        "chatgpt": 104760697,
+        "claude": 3425152,
+        "deepseek": 1390597,
+        "qwen": 962599
+      },
+      "message_count_by_provider": {
+        "chatgpt": 161429,
+        "claude": 6010,
+        "deepseek": 2015,
+        "qwen": 726
+      },
+      "token_total_non_system": 110539045,
+      "message_total_non_system": 170180
+    }
+  },
+  "provider_local_repair_summary": {
+    "status": "repaired",
+    "bug_fixed": "Provider-local ledgers/manifests no longer inherit the ChatGPT 115330530 baseline; counters now come from exact_message_recount per provider-local corpus.",
+    "provider_run_ledgers": {
+      "claude_20260226_065717": {
+        "provider": "claude",
+        "provider_run_id": "claude_20260226_065717",
+        "path": "reports/providers/claude/claude_20260226_065717/token_ledger.claude.claude_20260226_065717.json",
+        "source_path": "reports/providers/claude/claude_20260226_065717/_normalized_claude_claude_20260226_065717.json",
+        "source_sha256": "feb654168da6c80fcf5b2e7a8697d538c3e2ce25103100a77733895d5afeb9aa",
+        "content_tokens_non_system": 3008283,
+        "distilled_tokens_selected": 2285649,
+        "content_tokens_source_origin": "exact_message_recount"
+      },
+      "claude_20260227_080825_20260226": {
+        "provider": "claude",
+        "provider_run_id": "claude_20260227_080825_20260226",
+        "path": "reports/providers/claude/claude_20260227_080825_20260226/token_ledger.claude.claude_20260227_080825_20260226.json",
+        "source_path": "reports/providers/claude/claude_20260227_080825_20260226/_normalized_claude_claude_20260227_080825_20260226.json",
+        "source_sha256": "2bcadbb01f0defa2e7339380cc524305ebbb803e487f467fdaf3074d65aa071e",
+        "content_tokens_non_system": 1854471,
+        "distilled_tokens_selected": 1134446,
+        "content_tokens_source_origin": "exact_message_recount"
+      },
+      "qwen_20260226_063147": {
+        "provider": "qwen",
+        "provider_run_id": "qwen_20260226_063147",
+        "path": "reports/providers/qwen/qwen_20260226_063147/token_ledger.qwen.qwen_20260226_063147.json",
+        "source_path": "reports/providers/qwen/qwen_20260226_063147/_normalized_qwen_qwen_20260226_063147.json",
+        "source_sha256": "c0e99c00f2d9631ff1ad6b406d4db49118b75292fdea525f30f2eed55d6f5c60",
+        "content_tokens_non_system": 1017719,
+        "distilled_tokens_selected": 953828,
+        "content_tokens_source_origin": "exact_message_recount"
+      },
+      "deepseek_20260226_063139": {
+        "provider": "deepseek",
+        "provider_run_id": "deepseek_20260226_063139",
+        "path": "reports/providers/deepseek/deepseek_20260226_063139/token_ledger.deepseek.deepseek_20260226_063139.json",
+        "source_path": "reports/providers/deepseek/deepseek_20260226_063139/_normalized_deepseek_deepseek_20260226_063139.json",
+        "source_sha256": "faaa46efe9515d2cbb3d2d445061ada513054498eb9357defe875eb136f9d577",
+        "content_tokens_non_system": 1482829,
+        "distilled_tokens_selected": 1368910,
+        "content_tokens_source_origin": "exact_message_recount"
+      }
+    }
+  },
+  "merge_manifest_interpretation": {
+    "latest_manifest_provider": "claude",
+    "latest_manifest_run_id": "claude_20260227_080825_20260226",
+    "skip_only_rerun": true,
+    "note": "Latest main merge manifest is a skip-only rerun artifact. The late Claude layer is still present in the live DB and exact recount, so main authority must be read from the live DB plus token_recount.main.postdeps.json rather than the skip-only merge counters alone."
+  },
+  "checks": {
+    "quick_check_ok": true,
+    "record_uid_collisions_zero": true,
+    "late_claude_layer_present_in_main": true,
+    "merge_manifest_skip_only_rerun": true,
+    "provider_local_115330530_baseline_removed": true,
+    "all_checks_pass": true
+  },
+  "output_json": "reports/main/final_db_pass_20260228.json",
+  "output_markdown": "reports/main/final_db_pass_20260228.md"
+}

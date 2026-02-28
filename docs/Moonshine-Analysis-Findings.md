@@ -712,3 +712,49 @@ Uncertain/Low-Signal:         316 (22.8%)
 **Document prepared:** February 15, 2026  
 **For use in:** Moonshine Project Phase B (Analysis & Indexing)  
 **Next Review:** After Phase 1 metadata extraction complete (Week 2)
+
+
+---
+
+## 17. Release-Facing Interpretation Addendum (2026-02-28)
+
+The findings in this document remain analytically useful, but release-facing Moonshine claims should now be anchored to the validated authority stack rather than this report alone.
+
+### 17.1 Where Release Truth Lives
+
+Use these artifacts when translating findings into public or operator claims:
+
+- `reports/main/final_db_pass_20260228.json`
+- `reports/main/final_db_pass_20260228.md`
+- `reports/main/token_recount.main.postdeps.json`
+- `reports/main/moonshine_mash_active.db`
+- `docs/PUBLISH_SURFACE_20260228.md`
+
+### 17.2 Current Live Main State
+
+- conversations: `2788`
+- messages: `179974`
+- distilled_conversations: `2486`
+- exact non-system tokens: `122627092`
+- exact distilled non-system tokens: `110539045`
+
+### 17.3 Interpretation Boundary
+
+This report is an interpretive layer, not the final authority pack.
+
+For release-facing work:
+
+- use this document to explain what the corpus means,
+- use the authority pack to prove what the corpus currently contains,
+- use `docs/PUBLISH_SURFACE_20260228.md` to define what should and should not be exposed in a public-safe package.
+
+### 17.4 Packaging Implication
+
+Moonshine can now be exposed as a derived, queryable authority surface without exposing raw exports.
+
+That surface is centered on:
+
+- the main multi-provider SQLite authority DB,
+- the main validation/evidence pack,
+- the canonical raw-parquet lane,
+- the visualization layer.

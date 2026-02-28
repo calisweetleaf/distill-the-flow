@@ -1,38 +1,38 @@
 {
   "version": "2.0.0",
   "operation": "provider_upsert_merge",
-  "provider": "deepseek",
-  "run_id": "deepseek_20260226_063139",
-  "merged_at": "2026-02-27T06:18:00.774815+00:00",
+  "provider": "claude",
+  "run_id": "claude_20260227_080825_20260226",
+  "merged_at": "2026-02-27T07:28:51.315852+00:00",
   "dry_run": false,
-  "snapshot_path": "archive/main/deepseek_20260226_063139/moonshine_mash_premerge.db",
+  "snapshot_path": "archive/main/claude_20260227_080825_20260226/moonshine_mash_premerge.db",
   "counts": {
     "conversations": {
-      "inserted": 320,
+      "inserted": 0,
       "updated": 0,
-      "skipped": 0
+      "skipped": 207
     },
     "messages": {
-      "inserted": 2073,
+      "inserted": 0,
       "updated": 0,
-      "skipped": 0
+      "skipped": 2232
     },
     "distilled_conversations": {
-      "inserted": 304,
+      "inserted": 0,
       "updated": 0,
-      "skipped": 0
+      "skipped": 141
     }
   },
   "token_reconciliation": {
-    "provider": "deepseek",
-    "run_id": "deepseek_20260226_063139",
-    "db_total_tokens": 898650,
-    "db_user_tokens": 186764,
-    "db_assistant_tokens": 711886,
+    "provider": "claude",
+    "run_id": "claude_20260227_080825_20260226",
+    "db_total_tokens": 1402496,
+    "db_user_tokens": 284847,
+    "db_assistant_tokens": 1117649,
     "ledger_canonical_tokens": 115330530,
-    "delta": -114431880,
+    "delta": -113928034,
     "reconciliation_note": "DB uses word*1.3 heuristic estimation; ledger uses o200k_base exact tiktoken count",
-    "source_sha256": "786b4ff4d86da66150bb538aa8dae8bdf6482a520b002765b871c03a297f1d9b",
+    "source_sha256": "2bcadbb01f0defa2e7339380cc524305ebbb803e487f467fdaf3074d65aa071e",
     "status": "reconciled"
   },
   "gates": {
@@ -44,7 +44,7 @@
   },
   "gate_detail": {
     "G4_snapshot_exists": true,
-    "G4_note": "archive\\main\\deepseek_20260226_063139\\moonshine_mash_premerge.db",
+    "G4_note": "archive\\main\\claude_20260227_080825_20260226\\moonshine_mash_premerge.db",
     "G5_counters_non_null": true,
     "G6_idempotence_proof": "UNIQUE record_uid index enforces at storage layer",
     "G7_reconciliation_emitted": true,

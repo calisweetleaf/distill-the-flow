@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "project": "moonshine",
+    "update_version": "1.0.0",
+    "update_number": 1,
+    "date_generated": "2026-02-15T09:16:42Z",
+    "classification": "internal",
+    "data_sources": ["chatgpt_export_2026-02-14"],
+    "next_update": "2026-03-15"
+  },
+  "corpus_summary": {
+    "total_conversations": 1439,
+    "total_messages": 169397,
+    "total_tokens": 51524462,
+    "processing_stats": {
+      "conversations_per_second": 32,
+      "messages_per_second": 3765,
+      "processing_time_seconds": 45,
+      "memory_usage_mb": 150
+    }
+  },
+  "topic_distribution": [
+    {"topic": "architecture", "count": 676, "percentage": 0.470, "keywords": ["design", "system", "framework", "structure"]},
+    {"topic": "debugging", "count": 559, "percentage": 0.388, "keywords": ["error", "bug", "traceback", "fix"]},
+    {"topic": "data_processing", "count": 97, "percentage": 0.067, "keywords": ["data", "pipeline", "etl", "csv"]},
+    {"topic": "code_review", "count": 37, "percentage": 0.026, "keywords": ["review", "refactor", "improve"]},
+    {"topic": "general", "count": 27, "percentage": 0.019, "keywords": ["discuss", "explain"]},
+    {"topic": "deployment", "count": 17, "percentage": 0.012, "keywords": ["deploy", "docker", "kubernetes"]},
+    {"topic": "rcf_theory", "count": 11, "percentage": 0.008, "keywords": ["rcf", "recursive", "frame"]},
+    {"topic": "rlhf_impl", "count": 10, "percentage": 0.007, "keywords": ["rlhf", "dpo", "reward"]},
+    {"topic": "meta", "count": 5, "percentage": 0.003, "keywords": ["conversational"]}
+  ],
+  "tone_distribution": [
+    {"tone": "clinical", "count": 795, "percentage": 0.552},
+    {"tone": "debugging", "count": 225, "percentage": 0.156},
+    {"tone": "code_driven", "count": 170, "percentage": 0.118},
+    {"tone": "collaborative", "count": 115, "percentage": 0.080},
+    {"tone": "neutral", "count": 106, "percentage": 0.074},
+    {"tone": "conversational", "count": 28, "percentage": 0.019}
+  ],
+  "temporal_evolution": [
+    {"period": 1, "conversation_count": 287, "avg_info_gain": 0.450, "time_range": "earliest"},
+    {"period": 2, "conversation_count": 287, "avg_info_gain": 0.480, "time_range": "early"},
+    {"period": 3, "conversation_count": 287, "avg_info_gain": 0.449, "time_range": "mid"},
+    {"period": 4, "conversation_count": 287, "avg_info_gain": 0.463, "time_range": "late"},
+    {"period": 5, "conversation_count": 291, "avg_info_gain": 0.450, "time_range": "latest"}
+  ],
+  "quality_metrics": {
+    "information_gain": {"average": 0.458, "min": 0.150, "max": 0.850, "median": 0.450},
+    "malicious_compliance": {"average": 0.073, "min": 0.000, "max": 0.850, "median": 0.000},
+    "user_entropy": {"average": 0.612, "min": 0.100, "max": 0.950, "median": 0.620},
+    "semantic_density": {"average": 0.234, "min": 0.050, "max": 0.850, "median": 0.220},
+    "token_ratio": {"average": 2.46, "min": 0.10, "max": 15.20, "median": 2.10},
+    "repetition_score": {"average": 0.342, "min": 0.000, "max": 0.950, "median": 0.320}
+  },
+  "high_signal_conversations": {
+    "count": 124,
+    "percentage": 0.086,
+    "criteria": "information_gain > 0.58 AND malicious_compliance < 0.25",
+    "estimated_tokens": 4400000,
+    "top_conversations": [
+      {"rank": 1, "title": "PC upgrade potential...", "topic": "data_processing", "info_gain": 0.850, "sycophancy": 0.000},
+      {"rank": 2, "title": "Recursive Simulator Breathphase Alignment...", "topic": "debugging", "info_gain": 0.850, "sycophancy": 0.000},
+      {"rank": 3, "title": "Ozymandias resurrection theme...", "topic": "debugging", "info_gain": 0.849, "sycophancy": 0.000}
+    ]
+  },
+  "correction_events": {
+    "conversations_with_corrections": 594,
+    "percentage": 0.413,
+    "total_events": 4413,
+    "average_per_conversation": 3.1,
+    "max_in_single": 104,
+    "top_conversations": [
+      {"title": "Report on Charlie Kirk...", "corrections": 104, "topic": "debugging", "info_gain": 0.436},
+      {"title": "Oracle origins investigation...", "corrections": 85, "topic": "debugging", "info_gain": 0.423},
+      {"title": "Ethical and legal concerns...", "corrections": 75, "topic": "debugging", "info_gain": 0.412}
+    ]
+  },
+  "artifacts": {
+    "code_blocks": {"total": 87003, "per_conversation_avg": 60.5},
+    "terminal_outputs": {"total": 45434, "per_conversation_avg": 31.6},
+    "tables": {"total": 702, "per_conversation_avg": 0.5},
+    "manifests": {"total": 1156, "per_conversation_avg": 0.8}
+  },
+  "system_status": {
+    "pipeline_stable": true,
+    "database_operational": true,
+    "last_processed": "2026-02-15T09:16:42Z",
+    "next_scheduled": "2026-03-15"
+  },
+  "chunks": {
+    "total_chunks": 1,
+    "chunk_number": 1,
+    "chunk_size_bytes": null,
+    "compression": null
+  }
+}

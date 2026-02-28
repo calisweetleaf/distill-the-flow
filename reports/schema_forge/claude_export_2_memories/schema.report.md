@@ -1,0 +1,42 @@
+# Schema Template: `memories.json`
+
+**Provider:** `claude_memories`  
+**File size:** 66.7 KB  
+**Records sampled:** 1  
+**Sampled (not full):** False  
+**Max depth:** 2  
+**Total fields:** 19  
+**Extracted at:** 2026-02-27T18:34:35.121514  
+
+## Structure Template
+
+```json
+[
+  {
+    "conversations_memory?": "str",
+    "project_memories?": {
+      "019b62d1-8cf4-7041-bf56-56164a8dca6a?": "str",
+      "019b63db-cb25-765f-a67a-dda05ade2e1e?": "str",
+      "019b6802-ed9e-763d-aaf5-9be8f1e20c15?": "str",
+      "019b7610-2d19-7218-b6d0-4f11c2d193df?": "str",
+      "019b7082-182e-7173-8e44-3a54b707efa6?": "str",
+      "019b7747-7d1b-76b6-bab2-2c8820723454?": "str",
+      "019b95c9-15b6-7013-9db7-51ee75fbde64?": "str",
+      "019b9e36-7244-77d5-aa9a-05532cebc1d7?": "str",
+      "019ba72c-8c80-72e7-9557-e8f3ac886930?": "str",
+      "019baf3e-e998-70b1-b1c9-40a9ef95da5f?": "str",
+      "019bbb7a-1b8e-7735-92d1-9494c558de00?": "str",
+      "019bc10b-fe2c-7063-8a64-816c90315557?": "str",
+      "019bd3cc-b578-7509-86b3-86f70d65dea2?": "str",
+      "019c4494-1865-72db-ad2f-8444cd5c6f46?": "str",
+      "019c4558-c930-70bb-ace0-c3905f77f890?": "str",
+      "019c64fa-1cb0-7450-91c6-c9d48d1bf69b?": "str"
+    },
+    "account_uuid?": "str"
+  }
+]
+```
+
+## Provider Notes
+
+> Anthropic Claude export - memories.json

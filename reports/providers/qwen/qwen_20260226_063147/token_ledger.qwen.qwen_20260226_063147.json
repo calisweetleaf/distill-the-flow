@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "created_at": "2026-02-26T06:31:48.942035+00:00",
+  "source_sha256": "c0e99c00f2d9631ff1ad6b406d4db49118b75292fdea525f30f2eed55d6f5c60",
+  "source_path": "reports/providers/qwen/qwen_20260226_063147/_normalized_qwen_qwen_20260226_063147.json",
+  "tokenizer": "o200k_base",
+  "parsing_scope": "message_content_non_system",
+  "counters": {
+    "raw_json_tokens": 1378294,
+    "content_tokens_non_system": 1017719,
+    "content_tokens_cleaned": 953828,
+    "distilled_tokens_selected": 953828,
+    "canonical_tokens": 1378294,
+    "distilled_tokens_excluded": 63891
+  },
+  "run_id": "moonshine_20260226_063147",
+  "provider": "qwen",
+  "provider_run_id": "qwen_20260226_063147",
+  "distillation_run_id": "moonshine_20260228_023800",
+  "distillation_timestamp": "2026-02-28T02:38:05.855498+00:00",
+  "content_tokens_source_origin": "exact_message_recount",
+  "notes": {
+    "raw_json_tokens": "Full file tokenization including JSON structure",
+    "content_tokens_non_system": "Exact o200k_base count over non-system message content for this provider-local corpus",
+    "content_tokens_cleaned": "Post-policy filtering (computed by distillation stage)",
+    "distilled_tokens_selected": "Final training/query subset (computed by distillation stage)"
+  }
+}

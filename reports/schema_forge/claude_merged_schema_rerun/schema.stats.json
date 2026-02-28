@@ -1,0 +1,11 @@
+{
+  "file": "reports\\schema_forge\\claude_merged\\conversations.json",
+  "size_bytes": 220401769,
+  "size_human": "210.2 MB",
+  "record_count": 1124,
+  "sampled": false,
+  "max_depth": 10,
+  "field_count": 181,
+  "processed_at": "2026-02-27T18:41:03.221331",
+  "provider": "claude_conversations"
+}

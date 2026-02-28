@@ -1,0 +1,22 @@
+{
+  "version": "1.1.0",
+  "provider": "claude",
+  "run_id": "claude_20260226_065717",
+  "generated_at": "2026-02-26T07:01:30Z",
+  "visualizations": [
+    "visualizations/providers/claude/claude_20260226_065717/topic_distribution.png",
+    "visualizations/providers/claude/claude_20260226_065717/quality_metrics_timeseries.png",
+    "visualizations/providers/claude/claude_20260226_065717/token_ratio_distribution.png",
+    "visualizations/providers/claude/claude_20260226_065717/corrections_scatter.png",
+    "visualizations/providers/claude/claude_20260226_065717/period_comparison.png",
+    "visualizations/providers/claude/claude_20260226_065717/corpus_overview.png",
+    "visualizations/providers/claude/claude_20260226_065717/distilled_corpus_dashboard.png",
+    "visualizations/providers/claude/claude_20260226_065717/quality_metrics_distilled_timeseries.png"
+  ],
+  "visual_intelligence": {
+    "payload": "reports/providers/claude/claude_20260226_065717/visuals/atlas_payload.json",
+    "dashboard": "reports/providers/claude/claude_20260226_065717/visuals/strategic_command_atlas.html",
+    "manifest": "reports/providers/claude/claude_20260226_065717/visuals/visual_manifest.json"
+  },
+  "note": "Full Moonshine PNG suite and command-atlas artifacts generated for Claude provider run."
+}

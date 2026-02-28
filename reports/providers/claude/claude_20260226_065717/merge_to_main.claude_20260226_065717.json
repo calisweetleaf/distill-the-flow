@@ -1,0 +1,54 @@
+{
+  "version": "2.0.0",
+  "operation": "provider_upsert_merge",
+  "provider": "claude",
+  "run_id": "claude_20260226_065717",
+  "merged_at": "2026-02-26T08:50:59.624894+00:00",
+  "dry_run": false,
+  "snapshot_path": "archive/main/claude_20260226_065717/moonshine_mash_premerge.db",
+  "counts": {
+    "conversations": {
+      "inserted": 757,
+      "updated": 0,
+      "skipped": 0
+    },
+    "messages": {
+      "inserted": 5589,
+      "updated": 0,
+      "skipped": 0
+    },
+    "distilled_conversations": {
+      "inserted": 652,
+      "updated": 0,
+      "skipped": 0
+    }
+  },
+  "token_reconciliation": {
+    "provider": "claude",
+    "run_id": "claude_20260226_065717",
+    "db_total_tokens": 2533550,
+    "db_user_tokens": 373276,
+    "db_assistant_tokens": 2160274,
+    "ledger_canonical_tokens": 115330530,
+    "delta": -112796980,
+    "reconciliation_note": "DB uses word*1.3 heuristic estimation; ledger uses o200k_base exact tiktoken count",
+    "source_sha256": "c839037c4cb8f56b6bf48e36f8110f4f3ce83ce1002f36eb6561d58ba489a94a",
+    "status": "reconciled"
+  },
+  "gates": {
+    "G4": "PASS",
+    "G5": "PASS",
+    "G6": "PASS",
+    "G7": "PASS",
+    "all_pass": true
+  },
+  "gate_detail": {
+    "G4_snapshot_exists": true,
+    "G4_note": "archive\\main\\claude_20260226_065717\\moonshine_mash_premerge.db",
+    "G5_counters_non_null": true,
+    "G6_idempotence_proof": "UNIQUE record_uid index enforces at storage layer",
+    "G7_reconciliation_emitted": true,
+    "all_pass": true
+  },
+  "idempotence_proof": null
+}

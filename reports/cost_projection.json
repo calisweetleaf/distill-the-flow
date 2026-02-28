@@ -1,0 +1,45 @@
+{
+  "report_version": "1.0.0",
+  "generated_at": "2026-02-26T06:37:58.050554+00:00",
+  "disclaimer": "These are estimates based on current market rates (2024-2025). Actual costs may vary significantly based on infrastructure, optimizations, and market changes.",
+  "provider_rates": {
+    "openai_gpt4": {
+      "input_per_1m": 30.0,
+      "output_per_1m": 60.0,
+      "training_per_1m": 8.0,
+      "notes": "OpenAI API rates"
+    },
+    "anthropic_claude": {
+      "input_per_1m": 3.0,
+      "output_per_1m": 15.0,
+      "training_per_1m": null,
+      "notes": "Anthropic Claude 3 rates"
+    },
+    "local_gpu_a100": {
+      "per_hour": 2.5,
+      "tokens_per_hour_8b": 50000000,
+      "notes": "Estimated A100 80GB cloud rental"
+    },
+    "local_gpu_h100": {
+      "per_hour": 4.5,
+      "tokens_per_hour_8b": 100000000,
+      "notes": "Estimated H100 cloud rental"
+    }
+  },
+  "model_configs": {
+    "8B": {
+      "params": "8,000,000,000",
+      "chinchilla_tokens": "160,000,000,000"
+    },
+    "70B": {
+      "params": "70,000,000,000",
+      "chinchilla_tokens": "1,400,000,000,000"
+    },
+    "405B": {
+      "params": "405,000,000,000",
+      "chinchilla_tokens": "8,100,000,000,000"
+    }
+  },
+  "tokenizer_projections": {},
+  "cost_scenarios": {}
+}

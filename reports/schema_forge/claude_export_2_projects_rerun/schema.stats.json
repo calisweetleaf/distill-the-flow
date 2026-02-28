@@ -1,0 +1,11 @@
+{
+  "file": "exports\\claude\\8-08-25_to_2-26-2026\\projects.json",
+  "size_bytes": 76803262,
+  "size_human": "73.2 MB",
+  "record_count": 93,
+  "sampled": false,
+  "max_depth": 3,
+  "field_count": 16,
+  "processed_at": "2026-02-27T18:40:55.097547",
+  "provider": "claude_projects"
+}

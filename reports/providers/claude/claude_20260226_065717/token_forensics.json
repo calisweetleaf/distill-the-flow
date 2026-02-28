@@ -1,0 +1,66 @@
+{
+  "report_version": "2.1.0-real-export-streaming",
+  "generated_at": "2026-02-26T07:22:12.133739+00:00",
+  "source_sha256": "c839037c4cb8f56b6bf48e36f8110f4f3ce83ce1002f36eb6561d58ba489a94a",
+  "dataset_summary": {
+    "total_conversations": 757,
+    "total_messages": 5589,
+    "total_tokens": 3030287,
+    "distilled_conversations": 652,
+    "distilled_tokens": null
+  },
+  "role_distribution": {
+    "user": 2855,
+    "assistant": 2734
+  },
+  "monthly_distribution": {
+    "1": 151,
+    "2": 151,
+    "3": 151,
+    "4": 151,
+    "5": 153
+  },
+  "topic_distribution": {
+    "architecture": 664,
+    "debugging": 43,
+    "code_review": 18,
+    "data_processing": 12,
+    "rcf_theory": 9,
+    "rlhf_impl": 8,
+    "deployment": 1,
+    "general": 1,
+    "meta": 1
+  },
+  "quality_distribution": {
+    "information_gain": {
+      "mean": 0.460347,
+      "median": 0.425613,
+      "std": 0.112968,
+      "min": 0.4,
+      "max": 0.85
+    },
+    "malicious_compliance": {
+      "mean": 0.093442,
+      "median": 0.0,
+      "std": 0.201452,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "user_entropy": {
+      "mean": 0.947464,
+      "median": 0.95481,
+      "std": 0.052459,
+      "min": 0.0,
+      "max": 1.0
+    }
+  },
+  "distillation_summary": {
+    "policy_version": "moonshine-distill-v1.0",
+    "budget_status": "under_band",
+    "quality_tiers": {
+      "bronze": 594,
+      "silver": 56,
+      "gold": 2
+    }
+  }
+}

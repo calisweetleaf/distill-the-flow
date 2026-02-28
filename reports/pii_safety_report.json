@@ -1,0 +1,75 @@
+{
+  "report_version": "1.0.0",
+  "generated_at": "2026-02-26T06:37:58.052581+00:00",
+  "safety_risk_distribution": {},
+  "pii_detection": {
+    "methodology": "Pattern-based detection on metadata and content analysis",
+    "patterns_checked": [
+      "email_address",
+      "phone_number",
+      "social_security_number",
+      "credit_card_number",
+      "ip_address",
+      "mac_address",
+      "physical_address"
+    ],
+    "detection_results": {
+      "email_address": {
+        "estimated_occurrences": "Not scanned - requires content access",
+        "detection_pattern": "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}"
+      },
+      "phone_number": {
+        "estimated_occurrences": "Not scanned - requires content access",
+        "detection_pattern": "\\b\\d{3}[-.]?\\d{3}[-.]?\\d{4}\\b"
+      },
+      "social_security_number": {
+        "estimated_occurrences": "Not scanned - requires content access",
+        "detection_pattern": "\\b\\d{3}-\\d{2}-\\d{4}\\b"
+      },
+      "credit_card_number": {
+        "estimated_occurrences": "Not scanned - requires content access",
+        "detection_pattern": "\\b(?:\\d{4}[-\\s]?){3}\\d{4}\\b"
+      }
+    },
+    "recommendation": "Full PII scan requires text content access. Use spaCy + presidio for comprehensive detection."
+  },
+  "high_risk_content": {},
+  "pii_scrubbing_recommendations": [
+    {
+      "priority": "high",
+      "action": "Implement email address detection and redaction",
+      "tool": "presidio-analyzer + presidio-anonymizer",
+      "rationale": "Email addresses are common in code and conversational data"
+    },
+    {
+      "priority": "high",
+      "action": "Implement phone number detection and redaction",
+      "tool": "presidio-analyzer ( PhoneRecognizer )",
+      "rationale": "Phone numbers may appear in support conversations"
+    },
+    {
+      "priority": "medium",
+      "action": "Implement SSN detection for US-focused datasets",
+      "tool": "presidio-analyzer",
+      "rationale": "SSN patterns may appear in documentation"
+    },
+    {
+      "priority": "medium",
+      "action": "Implement credit card detection",
+      "tool": "presidio-analyzer",
+      "rationale": "Rare but critical if present"
+    },
+    {
+      "priority": "low",
+      "action": "Implement API key and secret detection",
+      "tool": "detect-secrets or gitLeaks",
+      "rationale": "Code datasets may contain accidentally committed secrets"
+    },
+    {
+      "priority": "low",
+      "action": "Review high-safety-risk samples manually",
+      "tool": "Manual review workflow",
+      "rationale": "Automated detection may miss context-dependent risks"
+    }
+  ]
+}

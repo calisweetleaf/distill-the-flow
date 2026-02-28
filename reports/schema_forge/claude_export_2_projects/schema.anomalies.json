@@ -1,0 +1,32 @@
+[
+  {
+    "type": "empty_list",
+    "path": "$[38].docs",
+    "confidence": "unknown"
+  },
+  {
+    "type": "empty_list",
+    "path": "$[55].docs",
+    "confidence": "unknown"
+  },
+  {
+    "type": "empty_list",
+    "path": "$[62].docs",
+    "confidence": "unknown"
+  },
+  {
+    "type": "empty_list",
+    "path": "$[66].docs",
+    "confidence": "unknown"
+  },
+  {
+    "type": "empty_list",
+    "path": "$[90].docs",
+    "confidence": "unknown"
+  },
+  {
+    "type": "empty_list",
+    "path": "$[93].docs",
+    "confidence": "unknown"
+  }
+]

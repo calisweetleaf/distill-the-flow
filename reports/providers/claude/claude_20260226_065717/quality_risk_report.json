@@ -1,0 +1,13 @@
+{
+  "report_version": "1.0.0",
+  "generated_at": "2026-02-26T07:22:12.135746+00:00",
+  "quality_distribution": {},
+  "high_risk_samples": {},
+  "recommended_exclusions": {
+    "criteria": [],
+    "total_excluded_estimate": 0,
+    "exclusion_rate_pct": 0.0
+  },
+  "quality_by_source": {},
+  "risk_factors": []
+}

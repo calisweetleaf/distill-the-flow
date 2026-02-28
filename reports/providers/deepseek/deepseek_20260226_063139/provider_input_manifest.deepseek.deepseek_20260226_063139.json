@@ -1,0 +1,10 @@
+{
+  "provider": "deepseek",
+  "run_id": "deepseek_20260226_063139",
+  "input_path": "exports/deepseek/conversations.json",
+  "input_kind": "file",
+  "normalized_at": "2026-02-28T02:38:06.994263+00:00",
+  "normalized_conversations": 320,
+  "source_payload_path": "exports/deepseek/conversations.json",
+  "source_payload_sha256": "faaa46efe9515d2cbb3d2d445061ada513054498eb9357defe875eb136f9d577"
+}

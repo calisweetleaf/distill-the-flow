@@ -1,0 +1,3 @@
+tokenizer,total_tokens,mean_tokens_per_row,median_tokens_per_row,p95_tokens_per_row,max_tokens_per_row
+gpt-4,115804309,683.6266817003843,193.0,1740.0,49450
+gpt-3.5-turbo,115804309,683.6266817003843,193.0,1740.0,49450

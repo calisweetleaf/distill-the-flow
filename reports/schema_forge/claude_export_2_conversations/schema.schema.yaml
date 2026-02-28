@@ -1,0 +1,193 @@
+- uuid?: str
+  name?: str
+  summary?: str
+  created_at?: str
+  updated_at?: str
+  account?:
+    uuid?: str
+  chat_messages?:
+  - uuid?: str
+    text?: str
+    content?:
+    - start_timestamp?:
+      - str
+      - 'null'
+      stop_timestamp?:
+      - str
+      - 'null'
+      flags?: 'null'
+      type?: str
+      text?: str
+      citations?:
+      - uuid?: str
+        start_index?: int
+        end_index?: int
+        details?:
+          type?: str
+          url?: str
+      thinking?: str
+      summaries?:
+      - summary?: str
+      cut_off?: bool
+      alternative_display_type?: 'null'
+      id?:
+      - str
+      - 'null'
+      name?: str
+      input?:
+        code?: str
+        id?: str
+        type?: str
+        title?: str
+        command?: str
+        content?: str
+        version_uuid?: str
+        query?: str
+        path?: str
+        pattern?: str
+        language?:
+        - str
+        - 'null'
+        new_str?: str
+        old_str?: str
+        thought?: str
+        thoughtNumber?: int
+        totalThoughts?: int
+        nextThoughtNeeded?: bool
+        paths?:
+        - str
+        edits?:
+        - newText?: str
+          oldText?: str
+          new_str?: str
+          old_str?: str
+        body?: str
+        kind?: str
+        summary_title?: str
+        project_name?: str
+        note?: str
+        source?: str
+        md_citations?:
+        - url?: str
+          uuid?: str
+          title?: str
+          sources?:
+          - url?: str
+            uuid?: str
+            title?: str
+            source?: str
+            icon_url?: str
+            subtitles?: 'null'
+            content_body?: 'null'
+            resource_type?: 'null'
+          metadata?:
+            type?: str
+            uuid?: str
+            source?: str
+            icon_url?: str
+            preview_title?: str
+          end_index?: int
+          start_index?: int
+          origin_tool_name?: str
+        url?: str
+        isRevision?: bool
+        description?: str
+        max_text_results?: int
+        view_range?:
+        - int
+        file_text?: str
+        filepaths?:
+        - str
+        control?: str
+        limit?: int
+        tags?:
+        - str
+      message?:
+      - str
+      - 'null'
+      integration_name?:
+      - str
+      - 'null'
+      integration_icon_url?:
+      - str
+      - 'null'
+      icon_name?:
+      - str
+      - 'null'
+      context?: 'null'
+      display_content?:
+      - type?: str
+        table?:
+        - - str
+        content?:
+        - title?: str
+          subtitles?:
+          - - str
+          - 'null'
+          url?: 'null'
+          resource_type?:
+          - str
+          - 'null'
+          icon_url?: 'null'
+          source?: 'null'
+        link?:
+          title?: str
+          subtitles?: 'null'
+          url?: str
+          resource_type?: 'null'
+          icon_url?: str
+          source?: str
+        is_trusted?: bool
+        text?: str
+        language?: str
+        code?: str
+        filename?:
+        - str
+        - 'null'
+        json_block?: str
+      - 'null'
+      approval_options?: 'null'
+      approval_key?:
+      - str
+      - 'null'
+      is_mcp_app?: 'null'
+      tool_use_id?:
+      - str
+      - 'null'
+      content?:
+      - type?: str
+        text?: str
+        uuid?: str
+        title?: str
+        url?: str
+        metadata?:
+          type?: str
+          site_domain?: str
+          favicon_url?: str
+          site_name?: str
+        is_missing?: bool
+        is_citable?: bool
+        prompt_context_metadata?:
+          url?: str
+          age?: str
+          content_type?: str
+          search_provider?: str
+        file_uuid?: str
+        file_path?: str
+        name?: str
+        mime_type?:
+        - str
+        - 'null'
+      is_error?: bool
+      structured_content?: 'null'
+      meta?: 'null'
+    sender?: str
+    created_at?: str
+    updated_at?: str
+    attachments?:
+    - file_name?: str
+      file_size?: int
+      file_type?: str
+      extracted_content?: str
+    files?:
+    - file_name?: str

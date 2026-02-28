@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-02-26T06:37:58.052581+00:00",
+  "overall_status": "PASS",
+  "error_count": 0,
+  "warning_count": 1,
+  "failures": [
+    {
+      "check": "generate:token_forensics",
+      "severity": "warning",
+      "message": "moonshine_corpus.db not found \u2014 skipping real token forensics",
+      "details": {},
+      "timestamp": "2026-02-26T06:37:58.050554"
+    }
+  ],
+  "remediation_patches": [
+    {
+      "for_check": "generate:token_forensics",
+      "patch_type": "manual_review",
+      "description": "Requires manual investigation",
+      "actions": [
+        "Review the error message and determine appropriate fix"
+      ]
+    }
+  ]
+}

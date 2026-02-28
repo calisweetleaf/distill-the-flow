@@ -1,0 +1,35 @@
+{
+  "provider": "claude",
+  "run_id": "claude_20260227_080825_20260226",
+  "input_path": "exports/claude/8-08-25_to_2-26-2026",
+  "input_kind": "directory",
+  "normalized_at": "2026-02-28T02:37:21.837123+00:00",
+  "claude_metadata": {
+    "input_kind": "directory",
+    "input_path": "D:/distill_the_flow/exports/claude/8-08-25_to_2-26-2026",
+    "conversations_source": "D:/distill_the_flow/exports/claude/8-08-25_to_2-26-2026/conversations.json",
+    "conversations_source_sha256": "2bcadbb01f0defa2e7339380cc524305ebbb803e487f467fdaf3074d65aa071e",
+    "sidecars": {
+      "projects": {
+        "path": "D:/distill_the_flow/exports/claude/8-08-25_to_2-26-2026/projects.json",
+        "sha256": "13e6f3cbd2b6573da3e094f66e114f171e21c65a9007464797d7477a8a5f573b",
+        "count": 93
+      },
+      "memories": {
+        "path": "D:/distill_the_flow/exports/claude/8-08-25_to_2-26-2026/memories.json",
+        "sha256": "b3fd77f8ccda0b5960c13959ce0f90e6f03c8d244244eea6ab7f204dbfcf60be",
+        "count": 1
+      },
+      "users": {
+        "path": "D:/distill_the_flow/exports/claude/8-08-25_to_2-26-2026/users.json",
+        "sha256": "6ac3bd6d4943f6542cd79c1ab674d20db4da51aec1c4650f1d4428266f262285",
+        "count": 1
+      }
+    },
+    "raw_conversation_count": 212,
+    "normalized_count": 207
+  },
+  "normalized_conversations": 207,
+  "source_payload_path": "D:/distill_the_flow/exports/claude/8-08-25_to_2-26-2026/conversations.json",
+  "source_payload_sha256": "2bcadbb01f0defa2e7339380cc524305ebbb803e487f467fdaf3074d65aa071e"
+}

@@ -1,0 +1,11 @@
+{
+  "file": "exports\\claude\\8-08-25_to_2-26-2026\\memories.json",
+  "size_bytes": 68290,
+  "size_human": "66.7 KB",
+  "record_count": 1,
+  "sampled": false,
+  "max_depth": 2,
+  "field_count": 19,
+  "processed_at": "2026-02-27T18:34:35.121514",
+  "provider": "claude_memories"
+}

@@ -508,3 +508,83 @@ After each main-lane merge, update the following in the same pass:
 |---|---|---|
 | 2.0.0 | 2026-02-26 | Complete rewrite targeting `moonshine_mash_active.db`. Added `distilled_conversations` table spec, full provenance envelope, index topology, access pattern coverage matrix, and multi-provider merge documentation. |
 | 1.0.0 | 2026-02-15 | Initial spec targeting legacy `moonshine_corpus.db` with two-table schema. |
+
+## 11. Authority Refresh (2026-02-28)
+
+This section supersedes earlier top-level row counts and should be treated as the current live-state summary for `reports/main/moonshine_mash_active.db`.
+
+### 10.1 Corrected Executive Summary Metrics
+
+| Metric | Value |
+|---|---|
+| Tables | 3 |
+| Total rows | 185,248 |
+| Conversations | 2,788 |
+| Distilled conversations | 2,486 (89.2% pass rate) |
+| Messages | 179,974 |
+| Providers merged | `chatgpt`, `claude`, `qwen`, `deepseek` |
+| Exact non-system tokens | 122,627,092 |
+| Exact distilled non-system tokens | 110,539,045 |
+
+### 10.2 Provider Composition
+
+| Table | chatgpt | claude | deepseek | qwen | Total |
+|---|---:|---:|---:|---:|---:|
+| conversations | 1439 | 954 | 320 | 75 | 2788 |
+| messages | 169397 | 7726 | 2073 | 778 | 179974 |
+| distilled_conversations | 1326 | 789 | 304 | 67 | 2486 |
+
+### 10.3 Claude Provider-Run Breakdown
+
+The `claude` provider now spans two provider runs in main:
+
+| Table | `claude_20260226_065717` | `claude_20260227_080825_20260226` | Combined |
+|---|---:|---:|---:|
+| conversations | 757 | 197 | 954 |
+| messages | 5589 | 2137 | 7726 |
+| distilled_conversations | 652 | 137 | 789 |
+
+### 10.4 Exact Token Authority
+
+Current exact token authority comes from:
+
+- `reports/main/token_recount.main.postdeps.json`
+- `reports/main/final_db_pass_20260228.json`
+- `reports/main/final_db_pass_20260228.md`
+
+All non-system exact tokens by provider:
+
+- chatgpt: `115,334,978`
+- claude: `4,791,566`
+- deepseek: `1,482,829`
+- qwen: `1,017,719`
+
+Distilled non-system exact tokens by provider:
+
+- chatgpt: `104,760,697`
+- claude: `3,425,152`
+- deepseek: `1,390,597`
+- qwen: `962,599`
+
+### 10.5 Merge-Manifest Interpretation Rule
+
+`reports/main/merge_manifest.main.json` currently records a skip-only rerun for the second Claude run.
+
+That file is still operationally useful, but it is **not sufficient by itself** to determine whether the late Claude layer is present.
+
+The authoritative interpretation is:
+
+- the late Claude layer is present in the live DB,
+- the skip-only merge manifest reflects a later idempotence rerun,
+- the authoritative reconciliation lives in `reports/main/final_db_pass_20260228.*`.
+
+### 10.6 Provider-Local Ledger Repair Status
+
+Provider-local token ledgers/manifests for Claude, Qwen, and DeepSeek were regenerated on 2026-02-28 and no longer inherit the ChatGPT `115330530` baseline.
+
+Provider-local exact `content_tokens_non_system` values now read:
+
+- `claude_20260226_065717`: `3,008,283`
+- `claude_20260227_080825_20260226`: `1,854,471`
+- `qwen_20260226_063147`: `1,017,719`
+- `deepseek_20260226_063139`: `1,482,829`

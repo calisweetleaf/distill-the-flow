@@ -25,6 +25,101 @@ Objectives:
 
 ---
 
+## The Corpus
+
+This pipeline was built to distill something specific: **13 months of working research conversations**, January 2025 through February 2026, captured across two AI providers in parallel.
+
+These are not general-purpose chat logs. They are the working record of an individual developer designing and building a post-token frequency-based architecture — one that deliberately merges symbolic AI lineage (semantic frames, predicate logic, early-2000s NLP), connectionist foundations (1980s–90s neural networks), and modern LLM infrastructure into something the field does not currently have a name for. The conversations capture architecture decisions, failure modes, multi-turn debugging of novel systems, correction events, and live theoretical development across domains that rarely appear together in publicly available training data.
+
+### Provider Timeline
+
+Both providers cover the same 13-month window: **January 2025 → February 2026.**
+
+| Provider | Export Structure | Date Range | Conversations | Messages | Exact Tokens (o200k\_base) |
+|----------|-----------------|------------|:---:|:---:|---:|
+| chatgpt | Single clean export | Jan 2025 — Feb 14, 2026 | 1,439 | 169,397 | 115,334,978 |
+| claude | Two exports merged (split at Aug 2025) | Jan 2025 — Aug 5, 2025 + Aug 5, 2025 — Feb 2026 | 954 | 7,726 | 4,791,566 |
+| deepseek | Supplementary | 2025–2026 | 320 | 2,073 | 1,482,829 |
+| qwen | Supplementary | 2025–2026 | 75 | 778 | 1,017,719 |
+
+**ChatGPT** is one continuous export — no gaps, no splits, the full span in a single file. **Claude** required two separate exports because the platform's export window was bounded: the first covered January through early August 2025, the second picked up from August 5 through February 2026. Both were ingested separately, validated individually with source-hash locking, then merged into a single Claude provider run in the main mash DB. The combined Claude lane covers the same full 13 months as the ChatGPT lane, with provenance kept intact for every message.
+
+The result is **122,627,092 exact non-system tokens** across **2,788 conversations** and **179,974 messages**, with **110,539,045 tokens** surviving quality-gated distillation into the training-ready subset.
+
+### What Makes This Corpus Unusual
+
+**Technical density.** 85.8% of conversations are classified as architecture or debugging. This is not a mixed-use general corpus — it is a technical corpus built from sustained, goal-directed work sessions. Average code block density: 60.5 per conversation. Average terminal output density: 31.6 per conversation.
+
+**Near-zero sycophancy.** Mean malicious compliance score: 0.073 (scale 0–1). The conversations are not validation-seeking exchanges. They are genuine technical problem-solving sessions where the model pushes back, corrects, and sometimes fails. This makes them structurally different from most human preference datasets.
+
+**Correction density.** 41.3% of ChatGPT conversations contain at least one explicit correction event — 4,413 correction events total across 594 conversations. These are direct preference optimization candidates: the corpus contains the explicit signal of what was wrong and what the corrected version looked like, in context.
+
+**Longitudinal coherence.** The same operator worked with both providers across the same period on the same problems. This produces a cross-model validation surface: identical theoretical questions received by two different model families, allowing comparison of reasoning style, failure modes, and output quality against a shared ground truth.
+
+**Domain specificity.** RCF theory, eigenrecursion, HSGM, holographic memory models, frequency-domain neural architectures, TGP compiler design, and multi-agent orchestration systems appear throughout. This terminology and the extended reasoning chains around it do not exist in publicly available datasets at scale.
+
+### Corpus Visualizations
+
+**Quality metrics over time (ChatGPT, 5 temporal periods):**
+
+![Quality Metrics Timeseries](visualizations/quality_metrics_timeseries.png)
+
+Information gain rises from Period 1 (0.450) through Period 2 peak (0.480), stabilizes, and returns to baseline by Period 5. The trajectory reflects a corpus that is consistently productive rather than episodically brilliant — sustained, methodical work rather than scattered bursts.
+
+**Distilled corpus quality timeseries:**
+
+![Distilled Corpus Quality Timeseries](visualizations/quality_metrics_distilled_timeseries.png)
+
+**Topic distribution:**
+
+![Topic Distribution](visualizations/topic_distribution.png)
+
+**Period-over-period comparison:**
+
+![Period Comparison](visualizations/period_comparison.png)
+
+**Corrections scatter (DPO candidate surface):**
+
+![Corrections Scatter](visualizations/corrections_scatter.png)
+
+**Token ratio distribution (user-to-assistant balance):**
+
+![Token Ratio Distribution](visualizations/token_ratio_distribution.png)
+
+**Corpus overview dashboard:**
+
+![Corpus Overview Dashboard](visualizations/corpus_overview_dashboard.png)
+
+**Distilled corpus dashboard:**
+
+![Distilled Corpus Dashboard](visualizations/distilled_corpus_dashboard.png)
+
+**Extended analytics — cumulative token growth:**
+
+![Cumulative Token Growth](visualizations/extended/cumulative_token_growth.png)
+
+**Extended analytics — monthly token volume:**
+
+![Monthly Tokens Millions](visualizations/extended/monthly_tokens_millions.png)
+
+**Extended analytics — tone cluster distribution:**
+
+![Tone Cluster Distribution](visualizations/extended/tone_cluster_distribution.png)
+
+**Extended analytics — top topics:**
+
+![Top Topics](visualizations/extended/top_topics_barh.png)
+
+**Extended analytics — period quality signals:**
+
+![Period Quality Signals](visualizations/extended/period_quality_signals.png)
+
+**Claude provider corpus overview:**
+
+![Claude Corpus Overview](visualizations/providers/claude/claude_20260226_065717/corpus_overview.png)
+
+---
+
 ## Table of Contents
 
 - [Architecture](#architecture)
@@ -848,3 +943,70 @@ Main DB promotion wave is now complete for `qwen` then `deepseek`.
 - `reports/main/final_db_pass_20260227.md`
 - `reports/main/token_recount.main.postdeps.json`
 
+
+---
+
+## Live Authority Refresh (2026-02-28)
+
+This section supersedes older pre-gapfill main-lane counts and replaces the earlier `reports/main/token_recount.main.json` pointer with the live authority stack.
+
+### Live Authority Stack
+
+Read in this order:
+
+1. `reports/main/reports_authority_manifest.json`
+2. `reports/main/final_db_pass_20260228.json`
+3. `reports/main/final_db_pass_20260228.md`
+4. `reports/main/token_recount.main.postdeps.json`
+5. `reports/main/moonshine_mash_active.db`
+6. `PROJECT_DATABASE_DOCUMENTATION.md`
+
+### Current Main-Lane State
+
+- conversations: `2,788`
+- messages: `179,974`
+- distilled_conversations: `2,486`
+- provider composition:
+  - conversations: `chatgpt=1439`, `claude=954`, `deepseek=320`, `qwen=75`
+  - messages: `chatgpt=169397`, `claude=7726`, `deepseek=2073`, `qwen=778`
+  - distilled_conversations: `chatgpt=1326`, `claude=789`, `deepseek=304`, `qwen=67`
+
+### Exact Token Recount (o200k_base, non-system)
+
+- chatgpt: `115,334,978`
+- claude: `4,791,566`
+- deepseek: `1,482,829`
+- qwen: `1,017,719`
+- total: `122,627,092`
+- distilled total: `110,539,045`
+
+### Late Claude Gap-Fill Status
+
+The live DB now includes two Claude provider runs:
+
+- `claude_20260226_065717`: `757` conversations, `5,589` messages, `652` distilled
+- `claude_20260227_080825_20260226`: `197` conversations, `2,137` messages, `137` distilled
+
+Net delta versus the older `final_db_pass_20260227.*` checkpoint:
+
+- conversations: `+197`
+- messages: `+2,137`
+- distilled_conversations: `+137`
+- exact non-system tokens: `+1,783,283`
+
+### Provider-Local Ledger Repair
+
+Provider-local Claude/Qwen/DeepSeek ledgers and distillation manifests were repaired on 2026-02-28.
+
+They no longer inherit the ChatGPT `115330530` baseline and now carry exact provider-local `content_tokens_source` / `content_tokens_non_system` values derived from `exact_message_recount`.
+
+### Merge-Manifest Caveat
+
+`reports/main/merge_manifest.main.json` currently reflects a skip-only rerun for the late Claude run. That does **not** mean the late Claude layer is absent.
+
+The authoritative interpretation is encoded in:
+
+- `reports/main/final_db_pass_20260228.json`
+- `reports/main/final_db_pass_20260228.md`
+
+Those artifacts reconcile the skip-only rerun with the verified live DB state and exact recount totals.

@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "Strategic Command Atlas",
+    "generated_at": "2026-02-26T07:00:51.014766+00:00",
+    "dataset_total_samples": 0,
+    "dataset_total_tokens": 115330530
+  },
+  "network": {
+    "nodes": [
+      {
+        "id": "dataset",
+        "label": "Mission Dataset",
+        "group": "core",
+        "magnitude": 1.0
+      }
+    ],
+    "links": []
+  },
+  "phase_space": [],
+  "truncation_surface": [],
+  "cost_matrix": {
+    "rows": [],
+    "max_value": 1.0
+  },
+  "interventions": {
+    "flows": [],
+    "total_samples": 0,
+    "aggregate_excluded": 0,
+    "retained_estimate": 0
+  },
+  "safety_language": {},
+  "risk_stats": {}
+}

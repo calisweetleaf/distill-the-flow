@@ -592,3 +592,67 @@ For the completed qwen/deepseek promotion wave, use this evidence chain:
 4. `reports/main/token_recount.main.postdeps.json`
 5. `reports/main/merge_manifest.main.json`
 
+
+
+## Publish Surface Integration Addendum (2026-02-28)
+
+This addendum promotes `docs/PUBLISH_SURFACE_20260228.md` from an isolated packaging note into the active documentation chain.
+
+### Current Packaging Contract
+
+Use `docs/PUBLISH_SURFACE_20260228.md` as the release-shape reference for public-safe Moonshine packaging.
+
+It sits between top-level narrative docs and the evidence artifacts that prove live state.
+
+### Active Read Order for Release-Facing Work
+
+1. `README.md`
+2. `PROJECT_MOONSHINE_UPDATE_1.md`
+3. `docs/PUBLISH_SURFACE_20260228.md`
+4. `PROJECT_DATABASE_DOCUMENTATION.md`
+5. `docs/Moonshine-Project-Overview.md`
+6. `docs/Moonshine-Technical-Implementation.md`
+7. `docs/Moonshine-Analysis-Findings.md`
+8. `reports/main/reports_authority_manifest.json`
+9. `reports/main/final_db_pass_20260228.md`
+10. `reports/main/token_recount.main.postdeps.json`
+
+### Mandatory Public-Safe Surface
+
+These are the core release-facing artifact families:
+
+- root docs (`README.md`, `WIKI.md`, `PROJECT_MOONSHINE_UPDATE_1.md`, `PROJECT_DATABASE_DOCUMENTATION.md`)
+- `docs/`
+- `reports/main/` authority pack
+- `reports/canonical/` raw parquet lane
+- `visualizations/`
+- `reports/CURRENT_REPORTS_FILETREE.md`
+
+### Optional Extended Credibility Surface
+
+These may be included when a release intentionally broadens beyond the core authority pack:
+
+- provider metadata lane under `reports/providers/`
+- provider-local markdown reports
+- `visual_intelligence/`
+
+### Hard Exclusions
+
+Do not treat these as part of the public-safe Moonshine packaging contract:
+
+- raw exports under `exports/`
+- archives under `archive/`
+- synthetic quarantine as headline release surface
+- oversized legacy zip bundles not needed for the story
+
+### Authority Reminder
+
+Public or operator claims about current Moonshine state should resolve through:
+
+- `reports/main/reports_authority_manifest.json`
+- `reports/main/final_db_pass_20260228.json`
+- `reports/main/final_db_pass_20260228.md`
+- `reports/main/token_recount.main.postdeps.json`
+- `reports/main/moonshine_mash_active.db`
+
+This addendum supersedes older index assumptions that documentation alone is the release surface.

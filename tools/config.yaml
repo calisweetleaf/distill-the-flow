@@ -1,0 +1,53 @@
+# Schema Forge v1.0 - Batch Config
+# Copy this file, fill in your actual paths, then run:
+#   python json_tool.py --config config.yaml
+
+# Where all schema outputs go
+output_dir: ./schema_out
+
+# Max records to sample from large files before stopping.
+# GPT exports can have 100k+ lines - 10000 is plenty for a complete schema.
+sample_limit: 10000
+
+# ─────────────────────────────────────────────────────────
+# FILES - individual files to extract schemas from
+# ─────────────────────────────────────────────────────────
+files:
+  # OpenAI / ChatGPT export
+  - path: /path/to/chatgpt/conversations.json
+    label: gpt_export
+
+  # Claude export - first batch (e.g. Jan 2025 - Aug 2025)
+  - path: /path/to/claude_export_jan/conversations.json
+    label: claude_conversations_jan
+
+  # Claude export - second batch (e.g. Aug 2025 - Feb 2026)
+  - path: /path/to/claude_export_aug/conversations.json
+    label: claude_conversations_aug
+
+  # Claude memories
+  - path: /path/to/claude_export/memories.json
+    label: claude_memories
+
+  # Claude projects
+  - path: /path/to/claude_export/projects.json
+    label: claude_projects
+
+  # Gemini Takeout
+  # - path: /path/to/Takeout/Gemini/conversations.json
+  #   label: gemini_export
+
+  # Perplexity
+  # - path: /path/to/perplexity/history.json
+  #   label: perplexity_export
+
+# ─────────────────────────────────────────────────────────
+# MERGE - combine multiple Claude conversation exports
+# Run after verifying individual schemas above look correct.
+# ─────────────────────────────────────────────────────────
+merge:
+  - label: claude_merged
+    output: ./merged/conversations.json
+    inputs:
+      - /path/to/claude_export_jan/conversations.json
+      - /path/to/claude_export_aug/conversations.json

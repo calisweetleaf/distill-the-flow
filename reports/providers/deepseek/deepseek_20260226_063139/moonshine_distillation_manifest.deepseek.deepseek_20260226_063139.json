@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "run_id": "moonshine_20260228_023807",
+  "distillation_timestamp": "2026-02-28T02:38:15.049351+00:00",
+  "source_sha256": "faaa46efe9515d2cbb3d2d445061ada513054498eb9357defe875eb136f9d577",
+  "policy_version": "moonshine-distill-v1.0",
+  "policy_description": "Select conversations with information_gain>=0.40, malicious_compliance<=0.35, user_entropy>=0.40, targeting 90M-110M token band (canonical scaled).",
+  "policy_thresholds": {
+    "min_information_gain": 0.4,
+    "max_malicious_compliance": 0.35,
+    "min_user_entropy": 0.4,
+    "min_total_tokens": 100,
+    "max_repetition_score": 0.6,
+    "token_budget_min": 90000000,
+    "token_budget_max": 110000000
+  },
+  "input_conversations": 320,
+  "quality_passed": 304,
+  "quality_rejected": 16,
+  "budget_trimmed": 0,
+  "distilled_conversations": 304,
+  "distilled_tokens_selected": 1368910,
+  "budget_status": "under_band",
+  "content_tokens_source": 1482829,
+  "content_tokens_source_origin": "exact_message_recount",
+  "distilled_fraction": 0.9231745535054953,
+  "heuristic_scale_factor": 1.650063
+}

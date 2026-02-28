@@ -1095,3 +1095,58 @@ Before producing DPO/GRPO/SFT artifacts from main DB:
 
 Token totals and quality metrics must always be scope-labeled (heuristic vs canonical exact recount). Do not publish unlabeled token totals in release docs.
 
+
+
+## 14. Publish Surface Contract (2026-02-28)
+
+This section defines how the Moonshine system is packaged for release-facing use without collapsing internal execution lanes into the public surface.
+
+### 14.1 Mandatory Release Layers
+
+#### Root and Narrative Layer
+- `README.md`
+- `WIKI.md`
+- `PROJECT_MOONSHINE_UPDATE_1.md`
+- `PROJECT_DATABASE_DOCUMENTATION.md`
+- `docs/`
+
+#### Main Authority Layer
+- `reports/main/final_db_pass_20260228.json`
+- `reports/main/final_db_pass_20260228.md`
+- `reports/main/reports_authority_manifest.json`
+- `reports/main/token_recount.main.postdeps.json`
+- `reports/main/moonshine_mash_active.db`
+
+#### Canonical Raw-Parquet Layer
+- `reports/canonical/parquet_forensics.raw.json`
+- `reports/canonical/parquet_forensics.raw.md`
+- `reports/canonical/token_row_metrics.raw.parquet`
+
+#### Visual Layer
+- `visualizations/`
+- `reports/CURRENT_REPORTS_FILETREE.md`
+
+### 14.2 Optional Extended Layers
+
+These are valid but non-mandatory extensions for a broader release:
+
+- `reports/providers/` metadata and markdown reports
+- `visual_intelligence/`
+- selected provider-local visuals
+
+### 14.3 Excluded Internal Lanes
+
+These should not be treated as part of the default public-safe packaging contract:
+
+- raw exports under `exports/`
+- archived rollback lanes under `archive/`
+- synthetic quarantine as headline release material
+- oversized legacy zip bundles not needed for active authority
+
+### 14.4 Transport Constraint
+
+`reports/main/moonshine_mash_active.db` is approximately 805 MB and must travel through Git LFS.
+
+### 14.5 Staging Rule
+
+For release work, stage explicit paths rather than broad repository adds. This preserves the curated Moonshine surface and prevents accidental promotion of internal execution artifacts.

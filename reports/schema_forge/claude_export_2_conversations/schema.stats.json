@@ -1,0 +1,11 @@
+{
+  "file": "exports\\claude\\8-08-25_to_2-26-2026\\conversations.json",
+  "size_bytes": 78680851,
+  "size_human": "75.0 MB",
+  "record_count": 212,
+  "sampled": false,
+  "max_depth": 0,
+  "field_count": 159,
+  "processed_at": "2026-02-27T18:31:53.735923",
+  "provider": "claude_conversations"
+}

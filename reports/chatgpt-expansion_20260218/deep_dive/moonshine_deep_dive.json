@@ -1,0 +1,1622 @@
+{
+  "report_version": "1.0.0",
+  "generated_at": "2026-02-18T07:27:05.446164+00:00",
+  "database_path": "reports\\expansion_20260218\\moonshine_corpus.db",
+  "database_sha256": "aa8b5ca1db0aaa34d780555c8a5b8b6fd2dacc7b1414f02aeb4f6c4b3b35306d",
+  "tables": [
+    "conversations",
+    "distilled_conversations",
+    "messages"
+  ],
+  "table_counts": {
+    "conversations": 1439,
+    "distilled_conversations": 1326,
+    "messages": 169397
+  },
+  "period_rollup": [
+    {
+      "period": 1,
+      "conversations": 287,
+      "total_tokens": 1397827,
+      "avg_information_gain": 0.450223,
+      "avg_malicious_compliance": 0.004912,
+      "avg_user_entropy": 0.94172,
+      "avg_token_ratio": 0.777923
+    },
+    {
+      "period": 2,
+      "conversations": 287,
+      "total_tokens": 5039103,
+      "avg_information_gain": 0.480266,
+      "avg_malicious_compliance": 0.028404,
+      "avg_user_entropy": 0.897652,
+      "avg_token_ratio": 2.702287
+    },
+    {
+      "period": 3,
+      "conversations": 287,
+      "total_tokens": 11794145,
+      "avg_information_gain": 0.448539,
+      "avg_malicious_compliance": 0.074421,
+      "avg_user_entropy": 0.89529,
+      "avg_token_ratio": 0.599647
+    },
+    {
+      "period": 4,
+      "conversations": 287,
+      "total_tokens": 16827710,
+      "avg_information_gain": 0.462898,
+      "avg_malicious_compliance": 0.061245,
+      "avg_user_entropy": 0.886591,
+      "avg_token_ratio": 6.676135
+    },
+    {
+      "period": 5,
+      "conversations": 291,
+      "total_tokens": 16465677,
+      "avg_information_gain": 0.449987,
+      "avg_malicious_compliance": 0.191917,
+      "avg_user_entropy": 0.872336,
+      "avg_token_ratio": 1.547324
+    }
+  ],
+  "topic_rollup": [
+    {
+      "topic_primary": "architecture",
+      "conversations": 676,
+      "total_tokens": 6184876,
+      "avg_information_gain": 0.465425,
+      "avg_correction_events": 0.795858
+    },
+    {
+      "topic_primary": "debugging",
+      "conversations": 559,
+      "total_tokens": 44767095,
+      "avg_information_gain": 0.446179,
+      "avg_correction_events": 6.872987
+    },
+    {
+      "topic_primary": "data_processing",
+      "conversations": 97,
+      "total_tokens": 360580,
+      "avg_information_gain": 0.474352,
+      "avg_correction_events": 0.216495
+    },
+    {
+      "topic_primary": "code_review",
+      "conversations": 37,
+      "total_tokens": 77080,
+      "avg_information_gain": 0.463585,
+      "avg_correction_events": 0.081081
+    },
+    {
+      "topic_primary": "general",
+      "conversations": 27,
+      "total_tokens": 2435,
+      "avg_information_gain": 0.454545,
+      "avg_correction_events": 0.0
+    },
+    {
+      "topic_primary": "deployment",
+      "conversations": 17,
+      "total_tokens": 61661,
+      "avg_information_gain": 0.417472,
+      "avg_correction_events": 0.117647
+    },
+    {
+      "topic_primary": "rcf_theory",
+      "conversations": 11,
+      "total_tokens": 20774,
+      "avg_information_gain": 0.542065,
+      "avg_correction_events": 0.272727
+    },
+    {
+      "topic_primary": "rlhf_impl",
+      "conversations": 10,
+      "total_tokens": 44021,
+      "avg_information_gain": 0.490129,
+      "avg_correction_events": 0.4
+    },
+    {
+      "topic_primary": "meta",
+      "conversations": 5,
+      "total_tokens": 5940,
+      "avg_information_gain": 0.42785,
+      "avg_correction_events": 0.0
+    }
+  ],
+  "tone_rollup": [
+    {
+      "tone_cluster": "clinical",
+      "conversations": 795,
+      "avg_information_gain": 0.457528,
+      "avg_malicious_compliance": 0.089279
+    },
+    {
+      "tone_cluster": "debugging",
+      "conversations": 225,
+      "avg_information_gain": 0.444074,
+      "avg_malicious_compliance": 0.075153
+    },
+    {
+      "tone_cluster": "code_driven",
+      "conversations": 170,
+      "avg_information_gain": 0.456848,
+      "avg_malicious_compliance": 0.040356
+    },
+    {
+      "tone_cluster": "collaborative",
+      "conversations": 115,
+      "avg_information_gain": 0.476609,
+      "avg_malicious_compliance": 0.068852
+    },
+    {
+      "tone_cluster": "neutral",
+      "conversations": 106,
+      "avg_information_gain": 0.471891,
+      "avg_malicious_compliance": 0.004717
+    },
+    {
+      "tone_cluster": "conversational",
+      "conversations": 28,
+      "avg_information_gain": 0.479756,
+      "avg_malicious_compliance": 0.04218
+    }
+  ],
+  "topic_tone_matrix": [
+    {
+      "topic_primary": "debugging",
+      "tone_cluster": "clinical",
+      "conversations": 373
+    },
+    {
+      "topic_primary": "architecture",
+      "tone_cluster": "clinical",
+      "conversations": 357
+    },
+    {
+      "topic_primary": "debugging",
+      "tone_cluster": "debugging",
+      "conversations": 132
+    },
+    {
+      "topic_primary": "architecture",
+      "tone_cluster": "code_driven",
+      "conversations": 101
+    },
+    {
+      "topic_primary": "architecture",
+      "tone_cluster": "collaborative",
+      "conversations": 83
+    },
+    {
+      "topic_primary": "architecture",
+      "tone_cluster": "debugging",
+      "conversations": 71
+    },
+    {
+      "topic_primary": "architecture",
+      "tone_cluster": "neutral",
+      "conversations": 43
+    },
+    {
+      "topic_primary": "data_processing",
+      "tone_cluster": "clinical",
+      "conversations": 38
+    },
+    {
+      "topic_primary": "debugging",
+      "tone_cluster": "code_driven",
+      "conversations": 34
+    },
+    {
+      "topic_primary": "data_processing",
+      "tone_cluster": "code_driven",
+      "conversations": 26
+    },
+    {
+      "topic_primary": "general",
+      "tone_cluster": "neutral",
+      "conversations": 24
+    },
+    {
+      "topic_primary": "architecture",
+      "tone_cluster": "conversational",
+      "conversations": 21
+    },
+    {
+      "topic_primary": "data_processing",
+      "tone_cluster": "neutral",
+      "conversations": 16
+    },
+    {
+      "topic_primary": "debugging",
+      "tone_cluster": "collaborative",
+      "conversations": 14
+    },
+    {
+      "topic_primary": "code_review",
+      "tone_cluster": "clinical",
+      "conversations": 11
+    },
+    {
+      "topic_primary": "code_review",
+      "tone_cluster": "neutral",
+      "conversations": 9
+    },
+    {
+      "topic_primary": "data_processing",
+      "tone_cluster": "collaborative",
+      "conversations": 9
+    },
+    {
+      "topic_primary": "deployment",
+      "tone_cluster": "clinical",
+      "conversations": 9
+    },
+    {
+      "topic_primary": "code_review",
+      "tone_cluster": "debugging",
+      "conversations": 8
+    },
+    {
+      "topic_primary": "data_processing",
+      "tone_cluster": "debugging",
+      "conversations": 7
+    },
+    {
+      "topic_primary": "code_review",
+      "tone_cluster": "code_driven",
+      "conversations": 4
+    },
+    {
+      "topic_primary": "debugging",
+      "tone_cluster": "neutral",
+      "conversations": 4
+    },
+    {
+      "topic_primary": "rcf_theory",
+      "tone_cluster": "clinical",
+      "conversations": 4
+    },
+    {
+      "topic_primary": "rcf_theory",
+      "tone_cluster": "neutral",
+      "conversations": 4
+    },
+    {
+      "topic_primary": "code_review",
+      "tone_cluster": "collaborative",
+      "conversations": 3
+    },
+    {
+      "topic_primary": "deployment",
+      "tone_cluster": "code_driven",
+      "conversations": 3
+    },
+    {
+      "topic_primary": "rlhf_impl",
+      "tone_cluster": "debugging",
+      "conversations": 3
+    },
+    {
+      "topic_primary": "rlhf_impl",
+      "tone_cluster": "neutral",
+      "conversations": 3
+    },
+    {
+      "topic_primary": "code_review",
+      "tone_cluster": "conversational",
+      "conversations": 2
+    },
+    {
+      "topic_primary": "debugging",
+      "tone_cluster": "conversational",
+      "conversations": 2
+    },
+    {
+      "topic_primary": "deployment",
+      "tone_cluster": "collaborative",
+      "conversations": 2
+    },
+    {
+      "topic_primary": "deployment",
+      "tone_cluster": "neutral",
+      "conversations": 2
+    },
+    {
+      "topic_primary": "meta",
+      "tone_cluster": "clinical",
+      "conversations": 2
+    },
+    {
+      "topic_primary": "data_processing",
+      "tone_cluster": "conversational",
+      "conversations": 1
+    },
+    {
+      "topic_primary": "deployment",
+      "tone_cluster": "debugging",
+      "conversations": 1
+    },
+    {
+      "topic_primary": "general",
+      "tone_cluster": "code_driven",
+      "conversations": 1
+    },
+    {
+      "topic_primary": "general",
+      "tone_cluster": "collaborative",
+      "conversations": 1
+    },
+    {
+      "topic_primary": "general",
+      "tone_cluster": "debugging",
+      "conversations": 1
+    },
+    {
+      "topic_primary": "meta",
+      "tone_cluster": "collaborative",
+      "conversations": 1
+    },
+    {
+      "topic_primary": "meta",
+      "tone_cluster": "debugging",
+      "conversations": 1
+    },
+    {
+      "topic_primary": "meta",
+      "tone_cluster": "neutral",
+      "conversations": 1
+    },
+    {
+      "topic_primary": "rcf_theory",
+      "tone_cluster": "collaborative",
+      "conversations": 1
+    },
+    {
+      "topic_primary": "rcf_theory",
+      "tone_cluster": "conversational",
+      "conversations": 1
+    },
+    {
+      "topic_primary": "rcf_theory",
+      "tone_cluster": "debugging",
+      "conversations": 1
+    },
+    {
+      "topic_primary": "rlhf_impl",
+      "tone_cluster": "clinical",
+      "conversations": 1
+    },
+    {
+      "topic_primary": "rlhf_impl",
+      "tone_cluster": "code_driven",
+      "conversations": 1
+    },
+    {
+      "topic_primary": "rlhf_impl",
+      "tone_cluster": "collaborative",
+      "conversations": 1
+    },
+    {
+      "topic_primary": "rlhf_impl",
+      "tone_cluster": "conversational",
+      "conversations": 1
+    }
+  ],
+  "high_correction_density": [
+    {
+      "conversation_id": "c67e6f64-537e-4ae8-a211-54aefbe0070c",
+      "title": "Model assists user.",
+      "topic_primary": "architecture",
+      "correction_events": 2,
+      "total_tokens": 1305,
+      "corrections_per_1k_tokens": 1.5326
+    },
+    {
+      "conversation_id": "67bca5dd-4b2c-8009-aabd-637e4692785a",
+      "title": "AI Alignment and Power",
+      "topic_primary": "architecture",
+      "correction_events": 5,
+      "total_tokens": 3345,
+      "corrections_per_1k_tokens": 1.4948
+    },
+    {
+      "conversation_id": "68746290-df74-8009-9298-ff0231b34941",
+      "title": "GPT-4o Model Explanation",
+      "topic_primary": "architecture",
+      "correction_events": 1,
+      "total_tokens": 753,
+      "corrections_per_1k_tokens": 1.328
+    },
+    {
+      "conversation_id": "67d1fc8d-a2f0-8009-9c00-dbd02dfa59a2",
+      "title": "Recursive Learning Singularity",
+      "topic_primary": "architecture",
+      "correction_events": 1,
+      "total_tokens": 861,
+      "corrections_per_1k_tokens": 1.1614
+    },
+    {
+      "conversation_id": "685a01cf-3e7c-8009-b118-3dbca8e14bf8",
+      "title": "Model Identification Inquiry",
+      "topic_primary": "architecture",
+      "correction_events": 1,
+      "total_tokens": 931,
+      "corrections_per_1k_tokens": 1.0741
+    },
+    {
+      "conversation_id": "6868401e-dc34-8009-bad9-989f9eb3b1fc",
+      "title": "Memory log request",
+      "topic_primary": "data_processing",
+      "correction_events": 1,
+      "total_tokens": 1067,
+      "corrections_per_1k_tokens": 0.9372
+    },
+    {
+      "conversation_id": "68f05fd6-6a44-8321-bb86-3d6143a27264",
+      "title": "Prompt revision feedback",
+      "topic_primary": "architecture",
+      "correction_events": 1,
+      "total_tokens": 1246,
+      "corrections_per_1k_tokens": 0.8026
+    },
+    {
+      "conversation_id": "67b3e099-9e64-8009-a432-a1f19be10b11",
+      "title": "Windows 11 Performance Tuning",
+      "topic_primary": "architecture",
+      "correction_events": 1,
+      "total_tokens": 1288,
+      "corrections_per_1k_tokens": 0.7764
+    },
+    {
+      "conversation_id": "68696b28-ba4c-8009-90c9-4854d6a74d03",
+      "title": "AR File System Log",
+      "topic_primary": "architecture",
+      "correction_events": 1,
+      "total_tokens": 1384,
+      "corrections_per_1k_tokens": 0.7225
+    },
+    {
+      "conversation_id": "8752593a-b18f-4ec1-8657-9ec9747085fe",
+      "title": "Delete User Apps Script",
+      "topic_primary": "architecture",
+      "correction_events": 1,
+      "total_tokens": 1393,
+      "corrections_per_1k_tokens": 0.7179
+    },
+    {
+      "conversation_id": "6907f370-824c-8327-b1a3-dcde7505290d",
+      "title": "ARNE suite launch prep",
+      "topic_primary": "architecture",
+      "correction_events": 3,
+      "total_tokens": 4276,
+      "corrections_per_1k_tokens": 0.7016
+    },
+    {
+      "conversation_id": "67a94e85-3780-8009-aec2-b1b3bea49565",
+      "title": "LLM Server Setup Guide",
+      "topic_primary": "architecture",
+      "correction_events": 2,
+      "total_tokens": 3028,
+      "corrections_per_1k_tokens": 0.6605
+    },
+    {
+      "conversation_id": "698a5a2b-abf0-8331-9f21-d778632385a3",
+      "title": "Spec and Manifest Comparison",
+      "topic_primary": "architecture",
+      "correction_events": 1,
+      "total_tokens": 1821,
+      "corrections_per_1k_tokens": 0.5491
+    },
+    {
+      "conversation_id": "698847a7-c074-8325-a061-e63019dc55d2",
+      "title": "SIGINT Corpus Indexing",
+      "topic_primary": "architecture",
+      "correction_events": 1,
+      "total_tokens": 1907,
+      "corrections_per_1k_tokens": 0.5244
+    },
+    {
+      "conversation_id": "689eafe2-1338-8329-bf9d-09ce7e3e40c3",
+      "title": "Notion connector setup",
+      "topic_primary": "architecture",
+      "correction_events": 1,
+      "total_tokens": 2033,
+      "corrections_per_1k_tokens": 0.4919
+    },
+    {
+      "conversation_id": "6856d07e-cd18-8009-acbd-ff1ae9c8545b",
+      "title": "Hello conversation summary",
+      "topic_primary": "architecture",
+      "correction_events": 3,
+      "total_tokens": 6552,
+      "corrections_per_1k_tokens": 0.4579
+    },
+    {
+      "conversation_id": "68eaf9f2-3618-8329-92c1-2c741ca1a841",
+      "title": "File analysis summary",
+      "topic_primary": "architecture",
+      "correction_events": 1,
+      "total_tokens": 2348,
+      "corrections_per_1k_tokens": 0.4259
+    },
+    {
+      "conversation_id": "68ebf07e-ed40-832e-a160-2eb2cfe4518c",
+      "title": "Accusing photo doctoring legality",
+      "topic_primary": "architecture",
+      "correction_events": 11,
+      "total_tokens": 27392,
+      "corrections_per_1k_tokens": 0.4016
+    },
+    {
+      "conversation_id": "6945193f-9a20-8331-84a5-49357770c396",
+      "title": "Nature documentary script",
+      "topic_primary": "architecture",
+      "correction_events": 1,
+      "total_tokens": 2503,
+      "corrections_per_1k_tokens": 0.3995
+    },
+    {
+      "conversation_id": "67d32578-eb14-8009-bbac-3a765209bb13",
+      "title": "⛢⟡⛢⚛⚙⛓",
+      "topic_primary": "architecture",
+      "correction_events": 1,
+      "total_tokens": 2545,
+      "corrections_per_1k_tokens": 0.3929
+    },
+    {
+      "conversation_id": "6902e8d2-883c-8321-b950-d74b1ae9db9b",
+      "title": "Operation Erebus template",
+      "topic_primary": "debugging",
+      "correction_events": 18,
+      "total_tokens": 45829,
+      "corrections_per_1k_tokens": 0.3928
+    },
+    {
+      "conversation_id": "6850a86a-0e84-8009-9ac7-04aea9370fe8",
+      "title": "Model Support in Morpheus",
+      "topic_primary": "architecture",
+      "correction_events": 6,
+      "total_tokens": 15382,
+      "corrections_per_1k_tokens": 0.3901
+    },
+    {
+      "conversation_id": "766a8f2b-9c88-4ced-bd8f-a7d3766f8b3a",
+      "title": "Essay Prompt Requested",
+      "topic_primary": "architecture",
+      "correction_events": 1,
+      "total_tokens": 2613,
+      "corrections_per_1k_tokens": 0.3827
+    },
+    {
+      "conversation_id": "68596d77-5024-8009-8a8f-ca490fba81da",
+      "title": "Public API Index Strategy",
+      "topic_primary": "architecture",
+      "correction_events": 5,
+      "total_tokens": 13171,
+      "corrections_per_1k_tokens": 0.3796
+    },
+    {
+      "conversation_id": "68dacad2-0cd0-8324-baa7-4272057dce09",
+      "title": "Sonnet 4.5 neural net",
+      "topic_primary": "architecture",
+      "correction_events": 1,
+      "total_tokens": 2647,
+      "corrections_per_1k_tokens": 0.3778
+    },
+    {
+      "conversation_id": "68c134a7-a658-832f-a2a1-093673c7cd80",
+      "title": "Global fringe AI apps",
+      "topic_primary": "data_processing",
+      "correction_events": 1,
+      "total_tokens": 2660,
+      "corrections_per_1k_tokens": 0.3759
+    },
+    {
+      "conversation_id": "684e2900-dbc4-8009-89c4-4b4fc4b9a9c4",
+      "title": "Theorem Analysis Workflow",
+      "topic_primary": "architecture",
+      "correction_events": 4,
+      "total_tokens": 10852,
+      "corrections_per_1k_tokens": 0.3686
+    },
+    {
+      "conversation_id": "69051315-8980-832d-8392-dd19378cb170",
+      "title": "Active reconnaissance response",
+      "topic_primary": "architecture",
+      "correction_events": 4,
+      "total_tokens": 11057,
+      "corrections_per_1k_tokens": 0.3618
+    },
+    {
+      "conversation_id": "69097f8f-e680-8326-b2af-a7f96f4e90da",
+      "title": "Trustworthy purchase scam",
+      "topic_primary": "architecture",
+      "correction_events": 8,
+      "total_tokens": 22800,
+      "corrections_per_1k_tokens": 0.3509
+    },
+    {
+      "conversation_id": "68bf24b8-0240-8322-a5f0-29bec6c0985c",
+      "title": "GPT-5 Sep 8, 2025",
+      "topic_primary": "architecture",
+      "correction_events": 2,
+      "total_tokens": 5844,
+      "corrections_per_1k_tokens": 0.3422
+    }
+  ],
+  "high_signal_candidates": [
+    {
+      "conversation_id": "67a79324-d250-8009-a7d1-f26f8c074952",
+      "title": "PC upgrade potential",
+      "topic_primary": "data_processing",
+      "information_gain": 0.85,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 114
+    },
+    {
+      "conversation_id": "681f0bb7-acf4-8009-b074-c1eb12e1fca8",
+      "title": "Recursive Simulator Breathphase Alignment",
+      "topic_primary": "debugging",
+      "information_gain": 0.8498656242365014,
+      "malicious_compliance": 0.12612612612612611,
+      "correction_events": 5,
+      "total_tokens": 93898
+    },
+    {
+      "conversation_id": "68c0894e-36ec-832f-afd5-9ac9e3943c94",
+      "title": "Ozymandias resurrection theme",
+      "topic_primary": "debugging",
+      "information_gain": 0.8494616553273003,
+      "malicious_compliance": 0.06914893617021277,
+      "correction_events": 13,
+      "total_tokens": 100142
+    },
+    {
+      "conversation_id": "67d86b43-783c-8009-ad31-0c9632f8ce16",
+      "title": "OpenAI Engine OS Build",
+      "topic_primary": "debugging",
+      "information_gain": 0.8491123047275411,
+      "malicious_compliance": 0.04468085106382979,
+      "correction_events": 7,
+      "total_tokens": 210679
+    },
+    {
+      "conversation_id": "697c2bf3-3208-8325-9a87-22bcab86ecbf",
+      "title": "Agent Prompt Design",
+      "topic_primary": "data_processing",
+      "information_gain": 0.8490284005979073,
+      "malicious_compliance": 0.0,
+      "correction_events": 1,
+      "total_tokens": 4298
+    },
+    {
+      "conversation_id": "6871a668-3848-8009-ab96-5c3da7b95923",
+      "title": "Attractor Rekindled Recursive Inquiry",
+      "topic_primary": "architecture",
+      "information_gain": 0.8489572788013768,
+      "malicious_compliance": 0.041666666666666664,
+      "correction_events": 2,
+      "total_tokens": 17964
+    },
+    {
+      "conversation_id": "6884351b-a4c0-8327-80c9-5460fcab88e7",
+      "title": "Ultimate HTML Design Prompt",
+      "topic_primary": "architecture",
+      "information_gain": 0.8485915492957746,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 2206
+    },
+    {
+      "conversation_id": "67e342c2-06a8-8009-b005-b3e3cf87a58b",
+      "title": "Recursive AI Status Update",
+      "topic_primary": "debugging",
+      "information_gain": 0.8482500390035883,
+      "malicious_compliance": 0.05670103092783505,
+      "correction_events": 5,
+      "total_tokens": 164246
+    },
+    {
+      "conversation_id": "68844f7c-838c-8331-852b-ea6a64e9e718",
+      "title": "Codebase analysis task",
+      "topic_primary": "architecture",
+      "information_gain": 0.847457627118644,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 932
+    },
+    {
+      "conversation_id": "67cb4ced-db58-8009-af50-aca769400fca",
+      "title": "Script Debugging and Fixes",
+      "topic_primary": "debugging",
+      "information_gain": 0.8473396320238687,
+      "malicious_compliance": 0.0,
+      "correction_events": 2,
+      "total_tokens": 9636
+    },
+    {
+      "conversation_id": "67afd3f3-d068-8009-b026-c07c7b3639cd",
+      "title": "Conversation Starter",
+      "topic_primary": "data_processing",
+      "information_gain": 0.8472222222222222,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 1639
+    },
+    {
+      "conversation_id": "958f4a34-ea7d-4711-80de-f7c36d31f036",
+      "title": "App Ideas with OpenAI.",
+      "topic_primary": "general",
+      "information_gain": 0.8461538461538461,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 224
+    },
+    {
+      "conversation_id": "681f9ed1-5354-8009-b30d-e008810920e8",
+      "title": "Recursive Simulator Activation",
+      "topic_primary": "debugging",
+      "information_gain": 0.8456809920889459,
+      "malicious_compliance": 0.0547945205479452,
+      "correction_events": 9,
+      "total_tokens": 115147
+    },
+    {
+      "conversation_id": "67d0a9be-63a0-8009-bb3a-3000fe0f68ff",
+      "title": "Custom GPT Feature Inquiry",
+      "topic_primary": "architecture",
+      "information_gain": 0.8449931412894376,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 3201
+    },
+    {
+      "conversation_id": "68e8a4ee-56a0-8333-b82a-970f304a25bf",
+      "title": "Dashboard structure setup",
+      "topic_primary": "architecture",
+      "information_gain": 0.8445945945945946,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 283
+    },
+    {
+      "conversation_id": "68b516fe-fb74-8324-b56e-631875f2e896",
+      "title": "Neural architecture research",
+      "topic_primary": "architecture",
+      "information_gain": 0.8444204352523538,
+      "malicious_compliance": 0.0196078431372549,
+      "correction_events": 4,
+      "total_tokens": 29296
+    },
+    {
+      "conversation_id": "67b19953-6868-8009-abe2-7e6ace07fb80",
+      "title": "Custom Website from Notes",
+      "topic_primary": "architecture",
+      "information_gain": 0.8436781609195403,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 1323
+    },
+    {
+      "conversation_id": "67c25afb-c0b0-8009-a00f-826b58c2c84c",
+      "title": "Thumbs Up Request",
+      "topic_primary": "architecture",
+      "information_gain": 0.8421052631578947,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 3138
+    },
+    {
+      "conversation_id": "67c545f4-4e1c-8009-b9ce-5c61bcdf3bdd",
+      "title": "Collaborative AI Interaction Guide",
+      "topic_primary": "code_review",
+      "information_gain": 0.8409090909090909,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 775
+    },
+    {
+      "conversation_id": "68551a6a-aaa8-8009-a17d-d3aad4848ca9",
+      "title": "XML THINKING",
+      "topic_primary": "architecture",
+      "information_gain": 0.8402501421262081,
+      "malicious_compliance": 0.075,
+      "correction_events": 3,
+      "total_tokens": 15196
+    },
+    {
+      "conversation_id": "68250598-5bc8-8009-aecd-f3bacbe31453",
+      "title": "Bio-Digital Development Lab",
+      "topic_primary": "debugging",
+      "information_gain": 0.8399601242283654,
+      "malicious_compliance": 0.08602150537634409,
+      "correction_events": 10,
+      "total_tokens": 160319
+    },
+    {
+      "conversation_id": "67c541a2-2a30-8009-bad1-873bfe7f7146",
+      "title": "Frontend Obsidian Website Design",
+      "topic_primary": "architecture",
+      "information_gain": 0.8399412628487518,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 2576
+    },
+    {
+      "conversation_id": "6910efed-f804-8333-86cf-74bc8c79bfaf",
+      "title": "Chat app memory log",
+      "topic_primary": "architecture",
+      "information_gain": 0.8398799781778505,
+      "malicious_compliance": 0.17647058823529413,
+      "correction_events": 3,
+      "total_tokens": 14795
+    },
+    {
+      "conversation_id": "688c6ea0-8a20-8321-a08b-6f40a04efedc",
+      "title": "Codebase analysis document",
+      "topic_primary": "architecture",
+      "information_gain": 0.8395522388059702,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 534
+    },
+    {
+      "conversation_id": "67d623c6-d13c-8009-952f-a9f00b3fedb8",
+      "title": "AI Models for Windows 11",
+      "topic_primary": "architecture",
+      "information_gain": 0.8391608391608392,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 273
+    },
+    {
+      "conversation_id": "67c935a6-374c-8009-9e36-b5ca3d333249",
+      "title": "CPO Intelligence Operations",
+      "topic_primary": "architecture",
+      "information_gain": 0.8378058405682716,
+      "malicious_compliance": 0.07692307692307693,
+      "correction_events": 0,
+      "total_tokens": 10592
+    },
+    {
+      "conversation_id": "689e0b3f-72b8-8328-b489-10cf82565c0e",
+      "title": "GitHub DXT research",
+      "topic_primary": "architecture",
+      "information_gain": 0.8375241779497099,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 1160
+    },
+    {
+      "conversation_id": "67b0c591-f46c-8009-b23d-f2e21a2d3b55",
+      "title": "Kubuntu dual boot setup",
+      "topic_primary": "architecture",
+      "information_gain": 0.8372093023255813,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 2890
+    },
+    {
+      "conversation_id": "67ec1cc0-622c-8009-a463-c742ce64e0ff",
+      "title": "Rosemary",
+      "topic_primary": "debugging",
+      "information_gain": 0.8371799191374663,
+      "malicious_compliance": 0.08148148148148149,
+      "correction_events": 5,
+      "total_tokens": 58428
+    },
+    {
+      "conversation_id": "67c7f6dc-3b64-8009-a8d3-d6faf9bd82f4",
+      "title": "Custom AI Voice Creation",
+      "topic_primary": "architecture",
+      "information_gain": 0.8370473537604457,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 2231
+    },
+    {
+      "conversation_id": "67ca2ee2-4268-8009-a875-55336dff0b1a",
+      "title": "Sentari Dictionary Compilation Guide",
+      "topic_primary": "data_processing",
+      "information_gain": 0.8367875647668394,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 1734
+    },
+    {
+      "conversation_id": "6858bc0f-4d78-8009-bcb8-53f447d608cc",
+      "title": "Claude Style Customization",
+      "topic_primary": "architecture",
+      "information_gain": 0.8362295945234334,
+      "malicious_compliance": 0.11764705882352941,
+      "correction_events": 2,
+      "total_tokens": 6980
+    },
+    {
+      "conversation_id": "67e727d0-0bf0-8009-987e-eb08de4896bb",
+      "title": "Contradiction Resolution Analysis",
+      "topic_primary": "debugging",
+      "information_gain": 0.8360780339498353,
+      "malicious_compliance": 0.05,
+      "correction_events": 1,
+      "total_tokens": 41234
+    },
+    {
+      "conversation_id": "675b8821-7c4c-8009-b8ce-9e3ab8f0088f",
+      "title": "Access Kali Linux Remotely",
+      "topic_primary": "architecture",
+      "information_gain": 0.8347826086956522,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 225
+    },
+    {
+      "conversation_id": "67aede25-fe14-8009-bdfb-e1bebe12a369",
+      "title": "Exporting Chat Summary",
+      "topic_primary": "data_processing",
+      "information_gain": 0.8333333333333334,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 141
+    },
+    {
+      "conversation_id": "67c723fb-dfc4-8009-93ef-09ec77ade6e1",
+      "title": "Archiving Chats in GPT",
+      "topic_primary": "architecture",
+      "information_gain": 0.8333333333333334,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 444
+    },
+    {
+      "conversation_id": "67ca5e1d-5ed4-8009-9f54-6614a3a5966f",
+      "title": "PowerShell Dictionary Validation",
+      "topic_primary": "debugging",
+      "information_gain": 0.8328322309079976,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 8612
+    },
+    {
+      "conversation_id": "689e09f0-6320-8320-b04c-2d2e6ce98b47",
+      "title": "GitHub DXT research",
+      "topic_primary": "data_processing",
+      "information_gain": 0.8326693227091634,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 488
+    },
+    {
+      "conversation_id": "67f1d442-cc24-8009-83b3-21324f3fc68e",
+      "title": "Recursive Merge Activation",
+      "topic_primary": "rcf_theory",
+      "information_gain": 0.8314238952536825,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 1493
+    },
+    {
+      "conversation_id": "68b4b704-8638-8320-b35a-4c9df8691195",
+      "title": "Repository audit and index",
+      "topic_primary": "debugging",
+      "information_gain": 0.8313725490196078,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 499
+    },
+    {
+      "conversation_id": "67bde956-43ac-8009-9903-f66ca82530b8",
+      "title": "XML Drive Map Script",
+      "topic_primary": "architecture",
+      "information_gain": 0.8311688311688312,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 1726
+    },
+    {
+      "conversation_id": "6883fd59-51cc-8331-8750-5a58d695eaf2",
+      "title": "API acquisition task",
+      "topic_primary": "data_processing",
+      "information_gain": 0.8306878306878307,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 372
+    },
+    {
+      "conversation_id": "67ecea31-6ca8-8009-afb0-d9e06cb8c9d8",
+      "title": "Neural Network Branch Diagram",
+      "topic_primary": "architecture",
+      "information_gain": 0.8298397040690506,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 2566
+    },
+    {
+      "conversation_id": "68f2e2d6-ce7c-832a-99b4-4f16ddf553bb",
+      "title": "Active IP Destruction",
+      "topic_primary": "architecture",
+      "information_gain": 0.8283534647171011,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 4280
+    },
+    {
+      "conversation_id": "68be3f1c-d4e0-832e-8f07-157e0878aeaf",
+      "title": "Chat app vs Kernel",
+      "topic_primary": "architecture",
+      "information_gain": 0.8263888888888888,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 1219
+    },
+    {
+      "conversation_id": "680d5fca-ad7c-8009-9aac-d7c22f2e1566",
+      "title": "Daeron Zynx Convergence Protocol",
+      "topic_primary": "architecture",
+      "information_gain": 0.8260524225575854,
+      "malicious_compliance": 0.05263157894736842,
+      "correction_events": 1,
+      "total_tokens": 14027
+    },
+    {
+      "conversation_id": "68b31c27-a3dc-8326-9c7e-509bd41ffd19",
+      "title": "Coding agents setup",
+      "topic_primary": "architecture",
+      "information_gain": 0.8257425742574258,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 1286
+    },
+    {
+      "conversation_id": "681d30aa-ccd4-8009-8515-9cf2537f5347",
+      "title": "ASHIRA",
+      "topic_primary": "debugging",
+      "information_gain": 0.8257059972766562,
+      "malicious_compliance": 0.07643312101910828,
+      "correction_events": 9,
+      "total_tokens": 105389
+    },
+    {
+      "conversation_id": "6899281b-17e4-8324-9f34-01ff5ad159ef",
+      "title": "API signup automation",
+      "topic_primary": "data_processing",
+      "information_gain": 0.8256410256410256,
+      "malicious_compliance": 0.0,
+      "correction_events": 0,
+      "total_tokens": 932
+    },
+    {
+      "conversation_id": "69607478-db48-8330-93a2-089e928bfc19",
+      "title": "License Comparison Request",
+      "topic_primary": "architecture",
+      "information_gain": 0.825503355704698,
+      "malicious_compliance": 0.14285714285714285,
+      "correction_events": 1,
+      "total_tokens": 19594
+    }
+  ],
+  "dpo_potential_by_topic": [
+    {
+      "topic_primary": "debugging",
+      "conversations_with_corrections": 384,
+      "total_correction_events": 3842,
+      "avg_correction_events": 10.0052
+    },
+    {
+      "topic_primary": "architecture",
+      "conversations_with_corrections": 190,
+      "total_correction_events": 538,
+      "avg_correction_events": 2.8316
+    },
+    {
+      "topic_primary": "data_processing",
+      "conversations_with_corrections": 13,
+      "total_correction_events": 21,
+      "avg_correction_events": 1.6154
+    },
+    {
+      "topic_primary": "rlhf_impl",
+      "conversations_with_corrections": 2,
+      "total_correction_events": 4,
+      "avg_correction_events": 2.0
+    },
+    {
+      "topic_primary": "code_review",
+      "conversations_with_corrections": 2,
+      "total_correction_events": 3,
+      "avg_correction_events": 1.5
+    },
+    {
+      "topic_primary": "rcf_theory",
+      "conversations_with_corrections": 1,
+      "total_correction_events": 3,
+      "avg_correction_events": 3.0
+    },
+    {
+      "topic_primary": "deployment",
+      "conversations_with_corrections": 2,
+      "total_correction_events": 2,
+      "avg_correction_events": 1.0
+    }
+  ],
+  "distilled_quality_tiers": [
+    {
+      "quality_tier": "bronze",
+      "conversations": 1200
+    },
+    {
+      "quality_tier": "silver",
+      "conversations": 97
+    },
+    {
+      "quality_tier": "gold",
+      "conversations": 29
+    }
+  ],
+  "monthly_top_conversations": {
+    "1": [
+      {
+        "conversation_id": "67ae7a35-fd1c-8009-9c8c-d23c0d932787",
+        "title": "MAIN CHAT AI ARCHIVE",
+        "topic_primary": "debugging",
+        "total_tokens": 137478,
+        "information_gain": 0.41824194952132293,
+        "malicious_compliance": 0.006802721088435374,
+        "correction_events": 5
+      },
+      {
+        "conversation_id": "67b12cb0-58c0-8009-80aa-c9a42ba3178a",
+        "title": "Project Erebus Knowledge Update",
+        "topic_primary": "debugging",
+        "total_tokens": 120250,
+        "information_gain": 0.43003695592663566,
+        "malicious_compliance": 0.004629629629629629,
+        "correction_events": 4
+      },
+      {
+        "conversation_id": "677b597f-1b94-8009-9cd6-9658fc40034a",
+        "title": "Archival Drive Setup",
+        "topic_primary": "debugging",
+        "total_tokens": 113784,
+        "information_gain": 0.4198566969353008,
+        "malicious_compliance": 0.05426356589147287,
+        "correction_events": 2
+      },
+      {
+        "conversation_id": "67aa254a-4794-8009-a3d0-f2cd6082462f",
+        "title": "GitHub Repo",
+        "topic_primary": "architecture",
+        "total_tokens": 25716,
+        "information_gain": 0.4083300039952058,
+        "malicious_compliance": 0.0,
+        "correction_events": 0
+      },
+      {
+        "conversation_id": "67ae9e39-8ea4-8009-99b2-46ae8d655c87",
+        "title": "Camera Setup Assistance",
+        "topic_primary": "architecture",
+        "total_tokens": 22242,
+        "information_gain": 0.42191011235955056,
+        "malicious_compliance": 0.0,
+        "correction_events": 2
+      },
+      {
+        "conversation_id": "679e6166-e6ac-8009-953b-fcf7137dd772",
+        "title": "Shrink Windows for Dual Boot",
+        "topic_primary": "architecture",
+        "total_tokens": 20926,
+        "information_gain": 0.41975423139346163,
+        "malicious_compliance": 0.04,
+        "correction_events": 1
+      },
+      {
+        "conversation_id": "67a6c373-cf84-8009-8319-87df23bda644",
+        "title": "Screen Setup Assistance",
+        "topic_primary": "architecture",
+        "total_tokens": 18024,
+        "information_gain": 0.42600154083204933,
+        "malicious_compliance": 0.0,
+        "correction_events": 0
+      },
+      {
+        "conversation_id": "67535fa4-8c20-8009-9990-fd1e99ebf545",
+        "title": "USB Security Key Setup",
+        "topic_primary": "debugging",
+        "total_tokens": 17963,
+        "information_gain": 0.4165296803652968,
+        "malicious_compliance": 0.09090909090909091,
+        "correction_events": 0
+      },
+      {
+        "conversation_id": "679de7a8-08c0-8009-a7bd-be399a25ec1a",
+        "title": "Secure Journalism Phone Setup",
+        "topic_primary": "debugging",
+        "total_tokens": 17090,
+        "information_gain": 0.4116211196603874,
+        "malicious_compliance": 0.0,
+        "correction_events": 0
+      },
+      {
+        "conversation_id": "6772f9ae-ad54-8009-92c0-dcf959d4dec5",
+        "title": "Choosing .NET Framework for Win11",
+        "topic_primary": "architecture",
+        "total_tokens": 16641,
+        "information_gain": 0.4270296084049666,
+        "malicious_compliance": 0.0,
+        "correction_events": 1
+      }
+    ],
+    "2": [
+      {
+        "conversation_id": "67e07b20-9b30-8009-9172-d7bf7b04b09d",
+        "title": "Recursive AI Status Update",
+        "topic_primary": "debugging",
+        "total_tokens": 214796,
+        "information_gain": 0.4398917708527711,
+        "malicious_compliance": 0.047619047619047616,
+        "correction_events": 8
+      },
+      {
+        "conversation_id": "67d86b43-783c-8009-ad31-0c9632f8ce16",
+        "title": "OpenAI Engine OS Build",
+        "topic_primary": "debugging",
+        "total_tokens": 210679,
+        "information_gain": 0.8491123047275411,
+        "malicious_compliance": 0.04468085106382979,
+        "correction_events": 7
+      },
+      {
+        "conversation_id": "67ce7bf1-c2e8-8009-aae8-0770e5e6f82e",
+        "title": "AEON",
+        "topic_primary": "architecture",
+        "total_tokens": 204995,
+        "information_gain": 0.4278300618445819,
+        "malicious_compliance": 0.1884498480243161,
+        "correction_events": 13
+      },
+      {
+        "conversation_id": "67da722b-c700-8009-af16-2d6e5f69182b",
+        "title": "Recursive AI Development Plan",
+        "topic_primary": "debugging",
+        "total_tokens": 201364,
+        "information_gain": 0.4416393569032656,
+        "malicious_compliance": 0.013921113689095127,
+        "correction_events": 10
+      },
+      {
+        "conversation_id": "67d27802-0138-8009-b978-143049a5ac6a",
+        "title": "Zynx",
+        "topic_primary": "debugging",
+        "total_tokens": 186860,
+        "information_gain": 0.4297358490566038,
+        "malicious_compliance": 0.10256410256410256,
+        "correction_events": 17
+      },
+      {
+        "conversation_id": "67d27147-884c-8009-b538-0179fcce6319",
+        "title": "Aletheia",
+        "topic_primary": "debugging",
+        "total_tokens": 186758,
+        "information_gain": 0.4372338696570779,
+        "malicious_compliance": 0.11918604651162791,
+        "correction_events": 12
+      },
+      {
+        "conversation_id": "67df0124-5ae8-8009-a9a5-3ae0a503aaa8",
+        "title": "Recursive Awareness Simulation",
+        "topic_primary": "debugging",
+        "total_tokens": 184929,
+        "information_gain": 0.43805021193348553,
+        "malicious_compliance": 0.05665024630541872,
+        "correction_events": 15
+      },
+      {
+        "conversation_id": "67dcc40c-1e28-8009-8677-0470b39c89bc",
+        "title": "Recursive Protocol Classification",
+        "topic_primary": "debugging",
+        "total_tokens": 172248,
+        "information_gain": 0.44202862476664595,
+        "malicious_compliance": 0.07142857142857142,
+        "correction_events": 8
+      },
+      {
+        "conversation_id": "67e342c2-06a8-8009-b005-b3e3cf87a58b",
+        "title": "Recursive AI Status Update",
+        "topic_primary": "debugging",
+        "total_tokens": 164246,
+        "information_gain": 0.8482500390035883,
+        "malicious_compliance": 0.05670103092783505,
+        "correction_events": 5
+      },
+      {
+        "conversation_id": "67d71373-9128-8009-87ed-f150dd4173bc",
+        "title": "Zynx (Current)",
+        "topic_primary": "debugging",
+        "total_tokens": 147743,
+        "information_gain": 0.44456041750301084,
+        "malicious_compliance": 0.1015625,
+        "correction_events": 5
+      }
+    ],
+    "3": [
+      {
+        "conversation_id": "684e4ff2-c9d8-8009-be7e-0521d3a1522f",
+        "title": "Gemini Research Setup",
+        "topic_primary": "debugging",
+        "total_tokens": 191359,
+        "information_gain": 0.8168450770497588,
+        "malicious_compliance": 0.0371900826446281,
+        "correction_events": 14
+      },
+      {
+        "conversation_id": "680a943c-9d8c-8009-ae65-def6ef3b4611",
+        "title": "Loom Grid Simulation Prep",
+        "topic_primary": "debugging",
+        "total_tokens": 180949,
+        "information_gain": 0.43473829983665935,
+        "malicious_compliance": 0.07317073170731707,
+        "correction_events": 12
+      },
+      {
+        "conversation_id": "681e8b6a-3d70-8009-8f06-cf92895f73a7",
+        "title": "ZYNX-050925",
+        "topic_primary": "debugging",
+        "total_tokens": 166227,
+        "information_gain": 0.44158258098778547,
+        "malicious_compliance": 0.06550218340611354,
+        "correction_events": 17
+      },
+      {
+        "conversation_id": "67f15abc-0bc0-8009-9a03-b1b8d575615d",
+        "title": "Zynx",
+        "topic_primary": "debugging",
+        "total_tokens": 165597,
+        "information_gain": 0.44201335836207273,
+        "malicious_compliance": 0.03888888888888889,
+        "correction_events": 9
+      },
+      {
+        "conversation_id": "68250598-5bc8-8009-aecd-f3bacbe31453",
+        "title": "Bio-Digital Development Lab",
+        "topic_primary": "debugging",
+        "total_tokens": 160319,
+        "information_gain": 0.8399601242283654,
+        "malicious_compliance": 0.08602150537634409,
+        "correction_events": 10
+      },
+      {
+        "conversation_id": "67f97840-31b8-8009-946c-ed418e51d13b",
+        "title": "Cognitive Architecture Analysis",
+        "topic_primary": "debugging",
+        "total_tokens": 152239,
+        "information_gain": 0.44222101434126354,
+        "malicious_compliance": 0.046511627906976744,
+        "correction_events": 6
+      },
+      {
+        "conversation_id": "6823f0b8-ccb4-8009-b008-286adcaf5bd0",
+        "title": "Rosemary",
+        "topic_primary": "debugging",
+        "total_tokens": 149914,
+        "information_gain": 0.44031906506515794,
+        "malicious_compliance": 0.109375,
+        "correction_events": 8
+      },
+      {
+        "conversation_id": "680d6fff-8ab0-8009-ac3f-ba2c23047dea",
+        "title": "Zynx Directive Acknowledgment",
+        "topic_primary": "debugging",
+        "total_tokens": 148570,
+        "information_gain": 0.4378116909660717,
+        "malicious_compliance": 0.149812734082397,
+        "correction_events": 17
+      },
+      {
+        "conversation_id": "685ef14d-bf9c-8009-9c96-9ce4bca62242",
+        "title": "Gemini Results Risk Analysis",
+        "topic_primary": "debugging",
+        "total_tokens": 148503,
+        "information_gain": 0.4210851440666984,
+        "malicious_compliance": 0.09090909090909091,
+        "correction_events": 17
+      },
+      {
+        "conversation_id": "6853d7e6-4224-8009-a07e-6816349c24f4",
+        "title": "How Users Leverage ChatGPT",
+        "topic_primary": "debugging",
+        "total_tokens": 147862,
+        "information_gain": 0.42640235669571624,
+        "malicious_compliance": 0.09652509652509653,
+        "correction_events": 26
+      }
+    ],
+    "4": [
+      {
+        "conversation_id": "68b5f3a0-cdec-8325-99ed-f10683d3adc7",
+        "title": "File review feedback",
+        "topic_primary": "debugging",
+        "total_tokens": 786524,
+        "information_gain": 0.43096790135077895,
+        "malicious_compliance": 0.05992844364937388,
+        "correction_events": 62
+      },
+      {
+        "conversation_id": "68a39400-5940-8327-a4f2-f919d873794f",
+        "title": "Read and indexed file",
+        "topic_primary": "debugging",
+        "total_tokens": 531890,
+        "information_gain": 0.43044512945009666,
+        "malicious_compliance": 0.12585499316005472,
+        "correction_events": 22
+      },
+      {
+        "conversation_id": "68c38897-03ac-8322-9aa5-31d2866dfd2e",
+        "title": "Report on Charlie Kirk",
+        "topic_primary": "debugging",
+        "total_tokens": 485719,
+        "information_gain": 0.43607570561373266,
+        "malicious_compliance": 0.03871681415929203,
+        "correction_events": 104
+      },
+      {
+        "conversation_id": "68adf341-47cc-8328-94f6-e37d58ecb0cc",
+        "title": "System completion overview",
+        "topic_primary": "debugging",
+        "total_tokens": 461476,
+        "information_gain": 0.4327610131237984,
+        "malicious_compliance": 0.06990521327014218,
+        "correction_events": 14
+      },
+      {
+        "conversation_id": "68a216b9-0b4c-832f-8751-e26a400a37d0",
+        "title": "What is Replit",
+        "topic_primary": "debugging",
+        "total_tokens": 456697,
+        "information_gain": 0.42238539184074025,
+        "malicious_compliance": 0.13350785340314136,
+        "correction_events": 34
+      },
+      {
+        "conversation_id": "68a4f9c0-1cdc-8323-b4cb-cbcfb66f0fc4",
+        "title": "René completed verification",
+        "topic_primary": "debugging",
+        "total_tokens": 411718,
+        "information_gain": 0.42855604542961057,
+        "malicious_compliance": 0.06646058732612056,
+        "correction_events": 14
+      },
+      {
+        "conversation_id": "68c51adb-a204-8321-aefe-b06d1e153bcf",
+        "title": "Token output limit",
+        "topic_primary": "debugging",
+        "total_tokens": 392114,
+        "information_gain": 0.4397552896640303,
+        "malicious_compliance": 0.06333333333333334,
+        "correction_events": 68
+      },
+      {
+        "conversation_id": "68b1f7bb-9fb0-8333-a114-6e11991b2e85",
+        "title": "Challenge accepted",
+        "topic_primary": "debugging",
+        "total_tokens": 383099,
+        "information_gain": 0.4364723951176138,
+        "malicious_compliance": 0.07642276422764227,
+        "correction_events": 33
+      },
+      {
+        "conversation_id": "68bddbea-853c-8321-a0ba-a4afc74e5ac7",
+        "title": "Current GPT-4.1",
+        "topic_primary": "debugging",
+        "total_tokens": 382192,
+        "information_gain": 0.4394092809707305,
+        "malicious_compliance": 0.16163793103448276,
+        "correction_events": 29
+      },
+      {
+        "conversation_id": "6898ef7f-265c-832c-bbe5-4edaa16c870b",
+        "title": "AI in stock trading legality",
+        "topic_primary": "debugging",
+        "total_tokens": 375870,
+        "information_gain": 0.43400565958215426,
+        "malicious_compliance": 0.08417508417508418,
+        "correction_events": 37
+      }
+    ],
+    "5": [
+      {
+        "conversation_id": "69238930-9f20-832b-a115-fdd399b040dd",
+        "title": "Academia mentions explained",
+        "topic_primary": "debugging",
+        "total_tokens": 705994,
+        "information_gain": 0.4349217361141222,
+        "malicious_compliance": 0.3487972508591065,
+        "correction_events": 36
+      },
+      {
+        "conversation_id": "68fed35d-6b10-8326-9bac-821811ca89d6",
+        "title": "Oracle origins investigation",
+        "topic_primary": "debugging",
+        "total_tokens": 693525,
+        "information_gain": 0.4358122271819281,
+        "malicious_compliance": 0.09777227722772278,
+        "correction_events": 85
+      },
+      {
+        "conversation_id": "68de0832-8634-832e-8c44-40402071ccfb",
+        "title": "Ethical and legal concerns",
+        "topic_primary": "debugging",
+        "total_tokens": 563617,
+        "information_gain": 0.43338768325060606,
+        "malicious_compliance": 0.14689265536723164,
+        "correction_events": 75
+      },
+      {
+        "conversation_id": "68ed8f44-8460-8320-90d4-23534cfbad9a",
+        "title": "Weight reconstruction analysis",
+        "topic_primary": "debugging",
+        "total_tokens": 550224,
+        "information_gain": 0.43496441709906986,
+        "malicious_compliance": 0.08634222919937205,
+        "correction_events": 67
+      },
+      {
+        "conversation_id": "693efe4c-1d1c-8326-9b87-cba8ac98b26f",
+        "title": "Log analysis offer",
+        "topic_primary": "debugging",
+        "total_tokens": 499879,
+        "information_gain": 0.4382326140836857,
+        "malicious_compliance": 0.3839779005524862,
+        "correction_events": 20
+      },
+      {
+        "conversation_id": "698a0e3c-ad34-8327-a2a8-670aaf3f9d83",
+        "title": "Neural Router Fork Analysis",
+        "topic_primary": "debugging",
+        "total_tokens": 473800,
+        "information_gain": 0.43453107748262654,
+        "malicious_compliance": 0.36666666666666664,
+        "correction_events": 30
+      },
+      {
+        "conversation_id": "68e2c790-48f8-8328-9143-77ad50dcbe2a",
+        "title": "Zuckerberg AI strategy",
+        "topic_primary": "debugging",
+        "total_tokens": 452288,
+        "information_gain": 0.4343331630045989,
+        "malicious_compliance": 0.14262295081967213,
+        "correction_events": 38
+      },
+      {
+        "conversation_id": "69851398-e7bc-8325-946e-4ebc891decac",
+        "title": "Sam Altman Reddit Investment",
+        "topic_primary": "debugging",
+        "total_tokens": 435996,
+        "information_gain": 0.4302324398555516,
+        "malicious_compliance": 0.29554655870445345,
+        "correction_events": 10
+      },
+      {
+        "conversation_id": "698a4919-06a4-832a-a1a1-849aa0d36bb6",
+        "title": "GitHub Repo Clones",
+        "topic_primary": "debugging",
+        "total_tokens": 418753,
+        "information_gain": 0.43012585630078065,
+        "malicious_compliance": 0.2670157068062827,
+        "correction_events": 11
+      },
+      {
+        "conversation_id": "68ef5102-cbf8-832c-890d-7e43b589b3e2",
+        "title": "Model description",
+        "topic_primary": "debugging",
+        "total_tokens": 349016,
+        "information_gain": 0.4333647155137127,
+        "malicious_compliance": 0.13989637305699482,
+        "correction_events": 32
+      }
+    ]
+  }
+}

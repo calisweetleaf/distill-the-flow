@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "created_at": "2026-02-27T07:28:17.852633+00:00",
+  "source_sha256": "2bcadbb01f0defa2e7339380cc524305ebbb803e487f467fdaf3074d65aa071e",
+  "source_path": "reports/providers/claude/claude_20260227_080825_20260226/_normalized_claude_claude_20260227_080825_20260226.json",
+  "tokenizer": "o200k_base",
+  "parsing_scope": "message_content_non_system",
+  "counters": {
+    "raw_json_tokens": 2579224,
+    "content_tokens_non_system": 1854471,
+    "content_tokens_cleaned": 1134446,
+    "distilled_tokens_selected": 1134446,
+    "canonical_tokens": 2579224,
+    "distilled_tokens_excluded": 720025
+  },
+  "run_id": "moonshine_20260227_072815",
+  "provider": "claude",
+  "provider_run_id": "claude_20260227_080825_20260226",
+  "distillation_run_id": "moonshine_20260228_023723",
+  "distillation_timestamp": "2026-02-28T02:37:34.985426+00:00",
+  "content_tokens_source_origin": "exact_message_recount",
+  "notes": {
+    "raw_json_tokens": "Full file tokenization including JSON structure",
+    "content_tokens_non_system": "Exact o200k_base count over non-system message content for this provider-local corpus",
+    "content_tokens_cleaned": "Post-policy filtering (computed by distillation stage)",
+    "distilled_tokens_selected": "Final training/query subset (computed by distillation stage)"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "provider": "qwen",
+  "run_id": "qwen_20260226_063147",
+  "input_path": "exports/qwen/qwen-chat-export-1771454860951.json",
+  "input_kind": "file",
+  "normalized_at": "2026-02-28T02:38:00.006721+00:00",
+  "normalized_conversations": 75,
+  "source_payload_path": "exports/qwen/qwen-chat-export-1771454860951.json",
+  "source_payload_sha256": "c0e99c00f2d9631ff1ad6b406d4db49118b75292fdea525f30f2eed55d6f5c60"
+}

@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-02-18T07:27:06.538169+00:00",
+  "outputs": {
+    "moonshine_deep_dive.json": {
+      "path": "reports\\expansion_20260218\\deep_dive\\moonshine_deep_dive.json",
+      "sha256": "20920f37300f8b2c030401fc526d31ce25de90be40e9f34311dcb45538720ac2",
+      "bytes": 52340
+    },
+    "moonshine_deep_dive.md": {
+      "path": "reports\\expansion_20260218\\deep_dive\\moonshine_deep_dive.md",
+      "sha256": "14b18599c095e1c9de3e9f7dc90ae676490573361bc5b9e03c02be7b609c9fa6",
+      "bytes": 14870
+    }
+  }
+}

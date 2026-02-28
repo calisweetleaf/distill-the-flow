@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "generated_at": "2026-02-28T02:41:46.920593+00:00",
+  "active_authority": {
+    "main_db": "reports/main/moonshine_mash_active.db",
+    "exact_token_recount": "reports/main/token_recount.main.postdeps.json",
+    "final_live_validation_json": "reports/main/final_db_pass_20260228.json",
+    "final_live_validation_md": "reports/main/final_db_pass_20260228.md",
+    "latest_merge_manifest": "reports/main/merge_manifest.main.json"
+  },
+  "lane_contract": {
+    "main": "Active mash/query lane",
+    "canonical": "Raw-only token forensics lane",
+    "legacy_synthetic": "Synthetic quarantine lane",
+    "expansion": "Exploratory run lane"
+  },
+  "lane_paths": {
+    "main": "reports/main/",
+    "canonical": "reports/canonical/",
+    "legacy_synthetic": "reports/legacy_synthetic/",
+    "expansion": "reports/expansion_20260218/"
+  },
+  "operator_read_order": [
+    "reports/main/reports_authority_manifest.json",
+    "reports/main/final_db_pass_20260228.json",
+    "reports/main/final_db_pass_20260228.md",
+    "reports/main/token_recount.main.postdeps.json",
+    "reports/main/moonshine_mash_active.db",
+    "PROJECT_DATABASE_DOCUMENTATION.md"
+  ],
+  "notes": [
+    "reports/main/moonshine_mash_active.db and reports/main/token_recount.main.postdeps.json are the live authority anchors.",
+    "The latest main merge manifest reflects a skip-only Claude rerun; consult the final live validation pack for the authoritative interpretation.",
+    "Provider-local ledgers/manifests were repaired on 2026-02-28 and no longer inherit the ChatGPT baseline token source."
+  ]
+}

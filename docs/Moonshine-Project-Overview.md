@@ -467,3 +467,57 @@ Conversation-level correction coverage in main:
   - combined `4,538`
 
 This is sufficient to produce a high-confidence initial DPO pack (for example, a balanced `50` claude + `50` chatgpt top-confidence export) while preserving source provenance.
+
+
+---
+
+## 13. Publish Surface and Public Boundary Addendum (2026-02-28)
+
+Moonshine now has a defined release-facing packaging contract recorded at:
+
+- `docs/PUBLISH_SURFACE_20260228.md`
+
+### 13.1 What the Public-Safe Surface Is
+
+The core Moonshine release-facing surface is:
+
+- root docs and `docs/`
+- `reports/main/` live authority pack
+- `reports/canonical/` raw parquet lane
+- `visualizations/`
+- release-facing inventory aids such as `reports/CURRENT_REPORTS_FILETREE.md`
+
+### 13.2 What It Is Not
+
+The default public-safe surface is not:
+
+- raw export disclosure,
+- archive disclosure,
+- synthetic quarantine disclosure as the headline story,
+- unrestricted promotion of every internal execution lane.
+
+### 13.3 Why This Matters
+
+Moonshine's strategic advantage is not just "a dataset." It is the combination of:
+
+- a provenance-safe multi-provider main DB,
+- a validated evidence stack,
+- canonical parquet analytics,
+- query-first operational structure.
+
+The publish-surface contract preserves that structure without forcing a full workspace release.
+
+### 13.4 Current Live Authority Snapshot
+
+- conversations: `2788`
+- messages: `179974`
+- distilled_conversations: `2486`
+- exact non-system tokens: `122627092`
+
+### 13.5 Read Order for Release-Facing Orientation
+
+1. `README.md`
+2. `PROJECT_MOONSHINE_UPDATE_1.md`
+3. `docs/PUBLISH_SURFACE_20260228.md`
+4. `PROJECT_DATABASE_DOCUMENTATION.md`
+5. `reports/main/reports_authority_manifest.json`
