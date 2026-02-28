@@ -4,5 +4,5 @@
 *.parquet !text !filter !merge !diff
 reports/main/merge_manifest.main.zip filter=lfs diff=lfs merge=lfs -text
 reports/schema_forge/claude_merged/conversations.json filter=lfs diff=lfs merge=lfs -text
-visualizations/visualizations-2-27-2026.zip !text !filter !merge !diff
 reports/schema_forge/claude_merged_v2/conversations.json filter=lfs diff=lfs merge=lfs -text
+visualizations/visualizations-2-27-2026.zip !text !filter !merge !diff
