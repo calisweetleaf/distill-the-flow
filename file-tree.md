@@ -1,4 +1,26 @@
-┣ docs
+ ┣ dataset_forensics
+ ┃ ┣ __pycache__
+ ┃ ┃ ┣ cli.cpython-312.pyc
+ ┃ ┃ ┣ dedup.cpython-312.pyc
+ ┃ ┃ ┣ ingestion.cpython-312.pyc
+ ┃ ┃ ┣ metadata.cpython-312.pyc
+ ┃ ┃ ┣ normalization.cpython-312.pyc
+ ┃ ┃ ┣ quality.cpython-312.pyc
+ ┃ ┃ ┣ tokenization.cpython-312.pyc
+ ┃ ┃ ┣ __init__.cpython-312.pyc
+ ┃ ┃ ┗ __main__.cpython-312.pyc
+ ┃ ┣ cli.py
+ ┃ ┣ config.single_source.yaml
+ ┃ ┣ config.yaml
+ ┃ ┣ dedup.py
+ ┃ ┣ ingestion.py
+ ┃ ┣ metadata.py
+ ┃ ┣ normalization.py
+ ┃ ┣ quality.py
+ ┃ ┣ tokenization.py
+ ┃ ┣ __init__.py
+ ┃ ┗ __main__.py
+ ┣ docs
  ┃ ┣ Moonshine-Analysis-Findings.md
  ┃ ┣ Moonshine-Documentation-Index.md
  ┃ ┣ Moonshine-Phase-Roadmap.md
@@ -14,10 +36,33 @@
  ┃ ┗ STATE_SNAPSHOT_20260217.md
  ┣ file-trees
  ┃ ┣ docs-filetree.md
- ┃ ┣ project-directory.md
  ┃ ┣ reports-filetree.md
  ┃ ┣ scripts-filetree.md
  ┃ ┗ visualizations-filetree.md
+ ┣ mash_merge_archive
+ ┃ ┗ main
+ ┃ ┃ ┣ chatgpt
+ ┃ ┃ ┃ ┗ chatgpt_20260217_r1
+ ┃ ┃ ┃ ┃ ┣ dedup_clusters.parquet
+ ┃ ┃ ┃ ┃ ┣ moonshine_corpus.legacy_root_20260217.db
+ ┃ ┃ ┃ ┃ ┣ moonshine_corpus_report.legacy_root_20260217.md
+ ┃ ┃ ┃ ┃ ┣ moonshine_distillation_manifest.legacy_root_20260217.json
+ ┃ ┃ ┃ ┃ ┣ parquet_forensics.raw.json
+ ┃ ┃ ┃ ┃ ┣ parquet_forensics.raw.md
+ ┃ ┃ ┃ ┃ ┗ token_row_metrics.raw.parquet
+ ┃ ┃ ┣ claude_20260226_065717
+ ┃ ┃ ┃ ┣ merge_manifest.main.pre_claude_merge.json
+ ┃ ┃ ┃ ┗ moonshine_mash_premerge.db
+ ┃ ┃ ┣ claude_20260227_080825_20260226
+ ┃ ┃ ┃ ┗ moonshine_mash_premerge.db
+ ┃ ┃ ┣ deepseek_20260226_063139
+ ┃ ┃ ┃ ┗ moonshine_mash_premerge.db
+ ┃ ┃ ┣ main_20260219_bootstrap
+ ┃ ┃ ┃ ┗ moonshine_mash_bootstrap_from_expansion_20260218.db
+ ┃ ┃ ┣ manual_premerge_claude_20260226_before_live_merge
+ ┃ ┃ ┃ ┗ moonshine_mash_active.pre_claude_merge.db
+ ┃ ┃ ┗ qwen_20260226_063147
+ ┃ ┃ ┃ ┗ moonshine_mash_premerge.db
  ┣ reports
  ┃ ┣ canonical
  ┃ ┃ ┣ parquet_forensics.raw.json
@@ -216,15 +261,20 @@
  ┃ ┣ build_clean_release_repo.py
  ┃ ┣ check_schema.py
  ┃ ┣ fix_migration_indexes.py
+ ┃ ┣ generate_extended_visuals.py
  ┃ ┣ generate_final_db_pass.py
+ ┃ ┣ generate_real_export_forensics.py
  ┃ ┣ merge_provider_to_main.py
  ┃ ┣ migrate_main_db_to_phase2.py
  ┃ ┣ moonshine_export_deep_dive.py
  ┃ ┣ normalize_claude_export.py
+ ┃ ┣ reconcile_tokens_and_extract_june.py
  ┃ ┣ recount_main_tokens.py
  ┃ ┣ run_provider_analysis.py
  ┃ ┣ run_validation.py
+ ┃ ┣ run_visual_intelligence.py
  ┃ ┣ update_analyzer_schema.py
+ ┃ ┣ validate_visual_intelligence.py
  ┃ ┣ verify_release_authority.py
  ┃ ┗ _patch_moonshine_schema.py
  ┣ tools
@@ -283,12 +333,6 @@
  ┣ visual_intelligence
  ┃ ┣ command_atlas.py
  ┃ ┗ __init__.py
- ┣ __pycache__
- ┃ ┣ moonshine_corpus_analyzer.cpython-312.pyc
- ┃ ┣ moonshine_visualizer.cpython-312.pyc
- ┃ ┣ run_token_forensics.cpython-312.pyc
- ┃ ┣ token_forensics_agents.cpython-312.pyc
- ┃ ┗ token_forensics_orchestrator.cpython-312.pyc
  ┣ file-tree.md
  ┣ LICENSE
  ┣ moonshine_corpus_analyzer.py

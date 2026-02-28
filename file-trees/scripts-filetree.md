@@ -1,17 +1,21 @@
-
 scripts
  ┣ backfill_phase2_data.py
  ┣ build_clean_release_repo.py
  ┣ check_schema.py
  ┣ fix_migration_indexes.py
+ ┣ generate_extended_visuals.py
  ┣ generate_final_db_pass.py
+ ┣ generate_real_export_forensics.py
  ┣ merge_provider_to_main.py
  ┣ migrate_main_db_to_phase2.py
  ┣ moonshine_export_deep_dive.py
  ┣ normalize_claude_export.py
+ ┣ reconcile_tokens_and_extract_june.py
  ┣ recount_main_tokens.py
  ┣ run_provider_analysis.py
  ┣ run_validation.py
+ ┣ run_visual_intelligence.py
  ┣ update_analyzer_schema.py
+ ┣ validate_visual_intelligence.py
  ┣ verify_release_authority.py
  ┗ _patch_moonshine_schema.py

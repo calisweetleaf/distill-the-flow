@@ -1,0 +1,206 @@
+# Dataset Forensics Configuration
+# Production-grade token forensics system configuration
+
+# Dataset identification
+run_metadata:
+  dataset_name: "dataset_forensics_run"
+  version: "1.0.0"
+  description: "Production token forensics analysis"
+  tags: []
+
+# Input configuration
+input:
+  # Paths can be files or directories
+  # Supports: .json, .jsonl, .jsonl.gz, directories
+  paths:
+    - "02-14-26-ChatGPT/conversations.json"
+
+  # File patterns to match
+  patterns:
+    - "*.json"
+    - "*.jsonl"
+    - "*.jsonl.gz"
+
+  # ChatGPT export format detection
+  chatgpt_export_format: true
+  
+  # Streaming buffer size (MB)
+  buffer_size_mb: 50
+
+# Output configuration
+output:
+  # Base directory for all outputs
+  directory: "reports"
+  
+  # Output file names
+  metrics_parquet: "token_row_metrics.parquet"
+  benchmark_csv: "tokenizer_benchmark.csv"
+  manifest_json: "repro_manifest.json"
+  
+  # Compression for parquet
+  parquet_compression: "zstd"
+  
+  # Overwrite existing files
+  overwrite: true
+
+# Tokenizer configurations
+tokenizers:
+  - name: "cl100k_base"
+    backend: "tiktoken"
+    version: "cl100k_base"
+    context_windows:
+      - 4096
+      - 8192
+      - 32768
+    description: "GPT-4 / GPT-3.5-turbo encoding"
+    
+  - name: "character"
+    backend: "character"
+    context_windows:
+      - 4096
+      - 8192
+      - 32768
+    description: "Character-level fallback tokenizer"
+
+# Default tokenizer for primary metrics
+default_tokenizer: "cl100k_base"
+
+# Quality thresholds
+quality:
+  # Entropy thresholds (Shannon entropy, bits per character)
+  entropy:
+    min: 2.0
+    max: 6.0
+    
+  # Repetition thresholds
+  repetition:
+    max_character_ratio: 0.5  # Max ratio of repeated characters
+    max_ngram_4_ratio: 0.3    # Max ratio of repeated 4-grams
+    max_line_duplication: 0.7  # Max ratio of duplicate lines
+    
+  # Information gain (novelty ratio)
+  information_gain:
+    min: 0.1
+    
+  # Quality score thresholds (0-1 scale)
+  quality_score:
+    excellent: 0.8
+    good: 0.6
+    acceptable: 0.4
+    poor: 0.0
+
+# Deduplication settings
+deduplication:
+  # Exact deduplication using SHA256
+  exact:
+    enabled: true
+    
+  # Near deduplication using MinHash + LSH
+  near:
+    enabled: true
+    algorithm: "minhash_lsh"  # Options: minhash_lsh, simhash
+    similarity_threshold: 0.85
+    num_hashes: 128
+    num_bands: 16
+    rows_per_band: 8
+    
+  # SimHash alternative settings
+  simhash:
+    hash_bits: 64
+    max_hamming_distance: 3
+
+# Text normalization
+normalization:
+  # Unicode normalization form
+  unicode_form: "NFC"  # Options: NFC, NFD, NFKC, NFKD
+  
+  # Whitespace handling
+  normalize_whitespace: true
+  remove_control_chars: true
+  remove_zero_width: true
+  
+  # Line ending normalization
+  line_endings: "LF"  # Options: LF, CRLF, native
+
+# Language detection
+language_detection:
+  enabled: true
+  backend: "langdetect"  # Options: fasttext, langdetect, cld3
+  fallback: "unknown"
+  min_confidence: 0.5
+  detect_on_char_min: 50
+
+# Anomaly detection
+anomaly_detection:
+  enabled: true
+  
+  # Length-based anomalies
+  length:
+    min_chars: 10
+    max_chars: 1000000
+    max_tokens: 100000
+    
+  # Content-based anomalies
+  content:
+    detect_gibberish: true
+    detect_encoding_issues: true
+    detect_excessive_punctuation: true
+    
+  # Statistical anomalies
+  statistical:
+    zscore_threshold: 3.0
+    iqr_multiplier: 1.5
+
+# Processing options
+processing:
+  # Number of worker processes (0 = auto, 1 = single-threaded)
+  num_workers: 0
+  
+  # Batch size for processing
+  batch_size: 1000
+  
+  # Checkpoint interval (rows)
+  checkpoint_interval: 10000
+  
+  # Progress reporting interval (rows)
+  progress_interval: 1000
+  
+  # Memory limit (MB) for streaming
+  memory_limit_mb: 2048
+
+# Logging configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  format: "structured"  # structured, simple
+  
+  # Log to file
+  file:
+    enabled: true
+    path: "reports/logs"
+    rotation: "daily"
+    retention_days: 30
+    
+  # Console output
+  console:
+    enabled: true
+    colors: true
+
+# Safety and content filtering
+safety:
+  # PII detection
+  pii_detection:
+    enabled: false
+    entities: ["email", "phone", "ssn", "credit_card"]
+    
+  # Toxicity scoring
+  toxicity:
+    enabled: false
+    threshold: 0.8
+    
+  # Risk scoring (0-1 scale)
+  risk_scoring:
+    enabled: true
+    categories:
+      - "prompt_injection"
+      - "jailbreak"
+      - "data_exfiltration"

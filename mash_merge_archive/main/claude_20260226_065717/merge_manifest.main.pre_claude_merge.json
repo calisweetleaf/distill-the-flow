@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-02-19T00:00:00Z",
+  "operation": "bootstrap_main_from_expansion",
+  "status": "success",
+  "main_db": "reports/main/moonshine_mash_active.db",
+  "source_db": "reports/expansion_20260218/moonshine_corpus.db",
+  "source_token_ledger": "reports/expansion_20260218/token_ledger.json",
+  "main_token_ledger": "reports/main/token_ledger.main.json",
+  "archive_snapshot": "archive/main/main_20260219_bootstrap/moonshine_mash_bootstrap_from_expansion_20260218.db",
+  "legacy_root_archive": "archive/chatgpt/chatgpt_20260217_r1",
+  "counts": {
+    "inserted": null,
+    "updated": null,
+    "skipped": null,
+    "note": "Bootstrap copy operation, not a provider merge-upsert run."
+  },
+  "notes": [
+    "Promoted latest expansion DB to reports/main authority lane.",
+    "Archived legacy root moonshine DB/report/manifest from 2026-02-17 snapshot."
+  ]
+}

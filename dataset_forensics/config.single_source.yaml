@@ -1,0 +1,122 @@
+run_metadata:
+  dataset_name: "chatgpt_conversations_single_source"
+  version: "1.0.0"
+  description: "Single-source forensics run pinned to conversations.json"
+  tags: ["single_source", "chatgpt_export", "rectification"]
+
+input:
+  paths:
+    - "C:/Users/treyr/Desktop/Dev-Drive/distill_the_flow/02-14-26-ChatGPT/conversations.json"
+  patterns:
+    - "conversations.json"
+  chatgpt_export_format: true
+  buffer_size_mb: 50
+
+output:
+  directory: "reports"
+  metrics_parquet: "token_row_metrics.parquet"
+  benchmark_csv: "tokenizer_benchmark.csv"
+  manifest_json: "repro_manifest.json"
+  parquet_compression: "zstd"
+  overwrite: true
+
+tokenizers:
+  - name: "cl100k_base"
+    backend: "tiktoken"
+    version: "cl100k_base"
+    context_windows: [4096, 8192, 32768]
+    description: "GPT-4 / GPT-3.5-turbo encoding"
+  - name: "character"
+    backend: "character"
+    context_windows: [4096, 8192, 32768]
+    description: "Character fallback"
+
+default_tokenizer: "cl100k_base"
+
+quality:
+  entropy:
+    min: 2.0
+    max: 6.0
+  repetition:
+    max_character_ratio: 0.5
+    max_ngram_4_ratio: 0.3
+    max_line_duplication: 0.7
+  information_gain:
+    min: 0.1
+  quality_score:
+    excellent: 0.8
+    good: 0.6
+    acceptable: 0.4
+    poor: 0.0
+
+deduplication:
+  exact:
+    enabled: true
+  near:
+    enabled: true
+    algorithm: "minhash_lsh"
+    similarity_threshold: 0.85
+    num_hashes: 128
+    num_bands: 16
+    rows_per_band: 8
+
+normalization:
+  unicode_form: "NFC"
+  normalize_whitespace: true
+  remove_control_chars: true
+  remove_zero_width: true
+  line_endings: "lf"
+
+language_detection:
+  enabled: true
+  backend: "fasttext"
+  fallback: "unknown"
+  min_confidence: 0.5
+  detect_on_char_min: 50
+
+anomaly_detection:
+  enabled: true
+  length:
+    min_chars: 10
+    max_chars: 1000000
+    max_tokens: 100000
+  content:
+    detect_gibberish: true
+    detect_encoding_issues: true
+    detect_excessive_punctuation: true
+  statistical:
+    zscore_threshold: 3.0
+    iqr_multiplier: 1.5
+
+processing:
+  num_workers: 0
+  batch_size: 500
+  checkpoint_interval: 5000
+  progress_interval: 500
+  memory_limit_mb: 2048
+
+logging:
+  level: "INFO"
+  format: "structured"
+  file:
+    enabled: true
+    path: "reports/logs"
+    rotation: "daily"
+    retention_days: 30
+  console:
+    enabled: true
+    colors: true
+
+safety:
+  pii_detection:
+    enabled: false
+    entities: ["email", "phone", "ssn", "credit_card"]
+  toxicity:
+    enabled: false
+    threshold: 0.8
+  risk_scoring:
+    enabled: true
+    categories:
+      - "prompt_injection"
+      - "jailbreak"
+      - "data_exfiltration"

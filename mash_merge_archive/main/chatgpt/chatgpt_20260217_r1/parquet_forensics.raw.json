@@ -1,0 +1,33 @@
+{
+  "report_version": "1.0.0",
+  "generated_at": "2026-02-18T07:39:47.246491+00:00",
+  "dataset_summary": {
+    "total_samples": 169397,
+    "total_tokens": 231608618,
+    "avg_tokens_per_sample": 0,
+    "sources": [],
+    "split_distribution": {}
+  },
+  "tokenizer_comparison": {},
+  "context_window_analysis": {
+    "4k": {
+      "samples_fitting_pct": 97.03,
+      "samples_truncated": 5027,
+      "truncation_rate_pct": 2.97
+    },
+    "8k": {
+      "samples_fitting_pct": 98.37,
+      "samples_truncated": 2768,
+      "truncation_rate_pct": 1.63
+    },
+    "32k": {
+      "samples_fitting_pct": 99.98,
+      "samples_truncated": 26,
+      "truncation_rate_pct": 0.02
+    }
+  },
+  "quality_distribution": {},
+  "duplication_analysis": {},
+  "anomaly_summary": {},
+  "safety_risk_summary": {}
+}
