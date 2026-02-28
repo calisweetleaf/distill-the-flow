@@ -1,45 +1,25 @@
-# ── Python ──────────────────────────────────────────────
+# Python caches
 __pycache__/
 *.py[cod]
 *$py.class
-*.so
-*.egg
-*.egg-info/
-dist/
-build/
-.eggs/
+.pytest_cache/
+.mypy_cache/
+.cache/
 
-# ── Virtual Environments ────────────────────────────────
-.env
-.venv
-env/
+# Virtual environments
+.venv/
 venv/
+env/
 ENV/
 
-# ── IDE / Editor ────────────────────────────────────────
+# Editor folders
 .vscode/
 .idea/
-*.swp
-*.swo
-*~
-.project
-.classpath
-.settings/
 
-# ── OS junk ─────────────────────────────────────────────
+# OS junk
 .DS_Store
 Thumbs.db
 desktop.ini
 
-
+# Archives
 *.zip
-*.tar.gz
-*.7z
-
-# ── Logs ────────────────────────────────────────────────
-*.log
-
-# ── Secrets ─────────────────────────────────────────────
-.env
-*.key
-*.pem
