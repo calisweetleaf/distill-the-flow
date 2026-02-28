@@ -1,0 +1,45 @@
+# ── Python ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Virtual Environments ────────────────────────────────
+.env
+.venv
+env/
+venv/
+ENV/
+
+# ── IDE / Editor ────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# ── OS junk ─────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+
+*.zip
+*.tar.gz
+*.7z
+
+# ── Logs ────────────────────────────────────────────────
+*.log
+
+# ── Secrets ─────────────────────────────────────────────
+.env
+*.key
+*.pem
