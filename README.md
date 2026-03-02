@@ -23,6 +23,12 @@ Objectives:
 - **PII & Safety Scanning**: Heuristic-based detection with confidence scoring
 - **Reproducibility**: Cryptographic hashing, machine-readable manifests
 
+## Update March 2, 2026
+
+The discord server has been setup for the broader ecosystem from toolkit to the recursive-categorical-framework, this was done as I move towards more open collaboration and engagement. I am new to setting up these channels so quality and entry barrier will decrease. Feel free to message the categories channels, message me personally for any questions, collaborations, or other general discussion.
+
+[Discord-New-Channel](https://discord.gg/uj6ug5Sdw)
+
 ---
 
 ## The Corpus
