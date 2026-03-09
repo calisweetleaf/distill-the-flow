@@ -1,12 +1,11 @@
 <div align="center">
-  <img src="visuals/logo.png" alt="Operation Moonshine Distill the Flow" width="460" />
+  <img src="visuals/logo.png" alt="Operation Moonshine: Distill the Flow" width="460" />
   <h1>Operation Moonshine</h1>
   <p><strong>Distill the Flow</strong></p>
   <p>OpsOTA Drop 3: Corpus Forensics and Distillation Infrastructure</p>
   <p><a href="https://github.com/calisweetleaf/Reinforcement-Learning-Full-Pipeline">Drop 1: Reinforcement-Learning-Full-Pipeline</a></p>
   <p><a href="https://github.com/calisweetleaf/SOTA-Runtime-Core">Drop 2: SOTA-Runtime-Core</a></p>
   <p><a href="https://github.com/calisweetleaf/distill-the-flow">Drop 3: distill-the-flow</a></p>
-  <p><a href="https://github.com/calisweetleaf/somnus-license/blob/main/LICENSE">Somnus License (Repository Governing Terms)</a></p>
 </div>
 
 ---
@@ -668,25 +667,11 @@ If you use this toolkit in your research or production systems, please cite:
   publisher = {GitHub},
   url = {https://github.com/calisweetleaf/distill-the-flow},
   note = {Part of Project Decentralize SOTA},
-  license = {Sovereign Anti-Exploitation Software License}
-}
-```
+  license = {GNU GENERAL LICENSE VERSION 3
 
----
+**GPLv3 as of March 9, 2025:**
 
-## License
-
-**Sovereign Anti-Exploitation Software License**
-
-See [LICENSE](https://github.com/calisweetleaf/somnus-license) for full terms.
-
-**Summary:**
-
-- ✅ Open research and non-commercial use
-- ✅ Modification and self-hosting
-- ❌ Exploitation for centralized SaaS rent-seeking
-- ❌ Gatekeeping behind proprietary wrappers
-
+- As of 03-09-2026 this repository, its contents, and any other artifacts contained are governed now by GPLv3. The anti-exploit license has been retired.
 ---
 
 ## Project Roadmap
